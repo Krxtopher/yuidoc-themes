@@ -1,0 +1,148 @@
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #333;
+}
+
+/* -- Paragraphs ------------------------------------------------------------ */
+p { margin: 1.3em 0; }
+dd p, td p { margin-bottom: 0; }
+dd p:first-child, td p:first-child { margin-top: 0; }
+
+/* -- Headings -------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;/*was #f80*/
+    font-family: Helvectica, sans-serif;
+    margin:1em 0 15px;
+  padding:0;
+  font-weight:bold;
+  line-height:1.7;
+  cursor:text;
+  position:relative;
+}
+
+h1 {
+    font-size:2.5em;
+  border-bottom:1px solid #ddd;
+}
+
+h2 {
+    font-size:2em;
+  border-bottom:1px solid #eee;
+}
+
+h3 { font-size:1.5em; }
+
+h4 {
+    font-size:1.2em;
+}
+
+h5, h6 { font-size:1em; }
+
+.content {
+    padding: 18px;
+}
+
+/* Comma-separated list. */
+.apidocs ul.commas li:after { content: ', '; }
+.apidocs ul.commas li:last-child:after { content: ''; }
+
+
+/*=== Types ==*/
+
+.type {
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    background-color: #eaeaea;
+    font-weight: bold;
+    padding: 2px 4px 1px;
+    font-size: 80%;
+}
+
+.type a {
+    color: #23579d;
+    text-decoration: none;
+}
+
+/*=== Methods ===*/
+
+.method.item {
+	padding: 0;
+	margin: 1em 0;
+	background-color: #fff;
+}
+
+.method h3 {
+	font-size: 16px;
+	background-image: linear-gradient(#5389ca, #3c79b6);
+    border-radius: 4px 4px 0 0;
+	border: 1px solid #416a9c;
+    border-top: 1px solid #9fbbdc;
+    border-left: 1px solid #9fbbdc;
+	margin: 0;
+	padding: 5px 10px 4px 10px;
+	color: #fff;
+}
+
+.method h3 .type {
+    background-color: rgba(255, 255, 255, .5);
+    border-color: transparent;
+}
+
+.method h3 .flag {
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    font-style: italic;
+    font-weight: normal;
+    padding: 0 1em;
+}
+
+.method code {
+	font-family: Consolas, Menlo, "Courier New", monospace;
+}
+
+.args {
+	display: inline;
+}
+
+.args ul {
+	display: inline;
+	list-style: none;
+	padding: 0;
+}
+
+.args li {
+	display: inline;
+	padding: 0;
+}
+
+.method .meta {
+	background-color: #eaeaea;
+	margin: 0;
+	padding: 5px 10px;
+	color: #a0a0a0;
+	border-bottom: 1px solid #d5d5d5;
+	font-size: 13px;
+}
+
+.method .meta p {
+	margin: 0;
+}
+
+.method .meta a {
+	color: #a0a0a0;
+}
+
+.method .extended-detail {
+    border: 1px solid #d5d5d5;
+    border-top: 1px transparent;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+/*---- YUI component style overrides ----*/
+
+.yui3-skin-sam .yui3-tabview-panel {
+	background: #fcfcfc !important;
+}
