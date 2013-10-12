@@ -198,6 +198,7 @@ h5, h6 { font-size:1em; }
 ul.apis {
     list-style: none;
     padding: 0;
+    margin: 0;
     background-color: #fff;
     line-height: 1.5;
     font-size: 13px;
@@ -221,7 +222,8 @@ ul.apis li {
     background-color: red;
     padding: 10px;
     background-color: #fafafa;
-    border-bottom: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
 }
 
 
@@ -229,11 +231,11 @@ ul.apis li {
 /*---- YUI component style overrides ----*/
 
 .yui3-skin-sam .yui3-tabview-panel {
-    background: #fcfcfc !important;
+    background: #fcfcfc;
 }
 
 .yui3-skin-sam .yui3-tabview-panel {
-    border: none !important;
+    border: none;
 }
 
 .yui3-u-1-4 {
@@ -246,4 +248,5 @@ ul.apis li {
     border-width: 0 1px 1px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    margin: 0;
 }
