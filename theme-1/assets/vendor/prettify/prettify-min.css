@@ -1,14 +1,14 @@
 .pln {
-	color: #000;
+	color: #333;
 }
 
 @media screen {
 	.str {
-		color: #080;
+		color: #df1e5b;
 	}
 
 	.kwd {
-		color: #008;
+		color: #29a3cc;
 	}
 
 	.com {
@@ -16,15 +16,15 @@
 	}
 
 	.typ {
-		color: #606;
+		color: #3378ff;
 	}
 
 	.lit {
-		color: #066;
+		color: #df1e5b;
 	}
 
 	.pun,.opn,.clo {
-		color: #660;
+		color: #777;
 	}
 
 	.tag {
@@ -91,8 +91,10 @@
 }
 
 pre.prettyprint {
-	padding: 2px;
-	border: 1px solid #eaeaea;
+	padding: 10px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	overflow: auto;
 }
 
 ol.linenums {

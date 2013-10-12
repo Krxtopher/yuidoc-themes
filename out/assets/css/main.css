@@ -1,27 +1,18 @@
 body {
-	font-family: Helvetica, sans-serif;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #333;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+
+pre, code {
+    font-family: Consolas, Menlo, "Courier New", monospace;
 }
 
 /* -- Paragraphs ------------------------------------------------------------ */
 p { margin: 1.3em 0; }
 dd p, td p { margin-bottom: 0; }
 dd p:first-child, td p:first-child { margin-top: 0; }
-
-/* ---- Code ----- */
-code,
-pre code {
-    font-family: Consolas, Menlo, "Courier New", monospace;
-}
-
-pre.code {
-    background-color: #f7f7f7;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 1.3;
-}
 
 /* -- Headings -------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
@@ -64,7 +55,7 @@ h5, h6 { font-size:1em; }
 
 /*=== Types ==*/
 
-.type,
+.type :not(.crosslink),
 .crosslink {
     border: 1px solid #d9d9d9;
     border-radius: 3px;
@@ -74,7 +65,6 @@ h5, h6 { font-size:1em; }
     font-size: 80%;
 }
 
-.type a,
 .crosslink {
     color: #23579d;
     text-decoration: none;
@@ -83,22 +73,22 @@ h5, h6 { font-size:1em; }
 /*=== Methods ===*/
 
 .method.item {
-	padding: 0;
-	margin: 1em 0;
-	background-color: #fff;
+    padding: 0;
+    margin: 1em 0;
+    background-color: #fff;
     border: 3px solid #eee;
     border-radius: 3px;
 }
 
 .method h3 {
-	font-size: 16px;
-	/*background-image: linear-gradient(#5389ca, #3c79b6);*/
+    font-size: 16px;
+    /*background-image: linear-gradient(#5389ca, #3c79b6);*/
     background-image: linear-gradient(#444444, #333333);
-	border: 1px solid #cacaca;
+    border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
-	margin: 0;
-	padding: 10px 10px 4px 10px;
-	color: #555;
+    margin: 0;
+    padding: 10px 10px 4px 10px;
+    color: #555;
 
     background-image: linear-gradient(#fafafa, #eaeaea);
     background-repeat: repeat-x;
@@ -119,40 +109,40 @@ h5, h6 { font-size:1em; }
 }
 
 .method code {
-	font-family: Consolas, Menlo, "Courier New", monospace;
+    font-family: Consolas, Menlo, "Courier New", monospace;
 }
 
 .args {
-	display: inline;
+    display: inline;
 }
 
 .args ul {
-	display: inline;
-	list-style: none;
-	padding: 0;
+    display: inline;
+    list-style: none;
+    padding: 0;
 }
 
 .args li {
-	display: inline;
-	padding: 0;
+    display: inline;
+    padding: 0;
 }
 
 .method .meta {
-	background-color: #f8f8f8;
-	margin: 0;
-	padding: 5px 10px;
-	color: #999;
-	border: 1px solid #cacaca;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 5px 10px;
+    color: #999;
+    border: 1px solid #cacaca;
     border-top: none;
-	font-size: 13px;
+    font-size: 13px;
 }
 
 .method .meta p {
-	margin: 0;
+    margin: 0;
 }
 
 .method .meta a {
-	color: #999;
+    color: #999;
 }
 
 .method .extended-detail {
@@ -169,12 +159,32 @@ h5, h6 { font-size:1em; }
     font-style: italic;
 }
 
+/* Side Nav */
+
+ul.apis {
+    list-style: none;
+    padding: 0;
+    background-color: #fafafa;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.apis .type {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
 /*---- YUI component style overrides ----*/
 
 .yui3-skin-sam .yui3-tabview-panel {
-	background: #fcfcfc !important;
+    background: #fcfcfc !important;
 }
 
 .yui3-skin-sam .yui3-tabview-panel {
     border: none !important;
+}
+
+.yui3-u-1-4 {
+    width: 200px;
 }
