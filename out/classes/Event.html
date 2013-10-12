@@ -354,7 +354,7 @@ rely on an event object&#39;s state outside of the call stack it was received in
 
         
             <div id="property_bubbles" class="property item">
-    <h3 class="name"><code>bubbles</code></h3>
+    <h3 class="name"><code>bubbles</code>
     <span class="type">Boolean</span>
 
     
@@ -364,6 +364,8 @@ rely on an event object&#39;s state outside of the call stack it was received in
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -385,23 +387,25 @@ rely on an event object&#39;s state outside of the call stack it was received in
         
     </div>
 
-    <div class="description">
-        <p>Indicates whether the event will bubble through the display list.</p>
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates whether the event will bubble through the display list.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_cancelable" class="property item">
-    <h3 class="name"><code>cancelable</code></h3>
+    <h3 class="name"><code>cancelable</code>
     <span class="type">Boolean</span>
 
     
@@ -411,6 +415,8 @@ rely on an event object&#39;s state outside of the call stack it was received in
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -432,24 +438,26 @@ rely on an event object&#39;s state outside of the call stack it was received in
         
     </div>
 
-    <div class="description">
-        <p>Indicates whether the default behaviour of this event can be cancelled via
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates whether the default behaviour of this event can be cancelled via
 <a href="../classes/Event.html#method_preventDefault" class="crosslink">preventDefault</a>. This is set via the Event constructor.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_currentTarget" class="property item">
-    <h3 class="name"><code>currentTarget</code></h3>
+    <h3 class="name"><code>currentTarget</code>
     <span class="type">Object</span>
 
     
@@ -459,6 +467,8 @@ rely on an event object&#39;s state outside of the call stack it was received in
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -480,26 +490,28 @@ rely on an event object&#39;s state outside of the call stack it was received in
         
     </div>
 
-    <div class="description">
-        <p>The current target that a bubbling event is being dispatched from. For non-bubbling events, this will
+    <div class="extended-detail">
+        <div class="description">
+            <p>The current target that a bubbling event is being dispatched from. For non-bubbling events, this will
 always be the same as target. For example, if childObj.parent = parentObj, and a bubbling event
 is generated from childObj, then a listener on parentObj would receive the event with
 target=childObj (the original target) and currentTarget=parentObj (where the listener was added).</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> null</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> null</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_defaultPrevented" class="property item">
-    <h3 class="name"><code>defaultPrevented</code></h3>
+    <h3 class="name"><code>defaultPrevented</code>
     <span class="type">Boolean</span>
 
     
@@ -509,6 +521,8 @@ target=childObj (the original target) and currentTarget=parentObj (where the lis
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -530,24 +544,26 @@ target=childObj (the original target) and currentTarget=parentObj (where the lis
         
     </div>
 
-    <div class="description">
-        <p>Indicates if <a href="../classes/Event.html#method_preventDefault" class="crosslink">preventDefault</a> has been called
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_preventDefault" class="crosslink">preventDefault</a> has been called
 on this event.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_eventPhase" class="property item">
-    <h3 class="name"><code>eventPhase</code></h3>
+    <h3 class="name"><code>eventPhase</code>
     <span class="type">Number</span>
 
     
@@ -557,6 +573,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -578,27 +596,29 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>For bubbling events, this indicates the current event phase:<OL>
+    <div class="extended-detail">
+        <div class="description">
+            <p>For bubbling events, this indicates the current event phase:<OL>
     <LI> capture phase: starting from the top parent to the target</LI>
     <LI> at target phase: currently being dispatched from the target</LI>
     <LI> bubbling phase: from the target to the top parent</LI>
 </OL></p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> 0</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> 0</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_immediatePropagationStopped" class="property item">
-    <h3 class="name"><code>immediatePropagationStopped</code></h3>
+    <h3 class="name"><code>immediatePropagationStopped</code>
     <span class="type">Boolean</span>
 
     
@@ -608,6 +628,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -629,24 +651,26 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>Indicates if <a href="../classes/Event.html#method_stopImmediatePropagation" class="crosslink">stopImmediatePropagation</a> has been called
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_stopImmediatePropagation" class="crosslink">stopImmediatePropagation</a> has been called
 on this event.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_propagationStopped" class="property item">
-    <h3 class="name"><code>propagationStopped</code></h3>
+    <h3 class="name"><code>propagationStopped</code>
     <span class="type">Boolean</span>
 
     
@@ -656,6 +680,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -677,24 +703,26 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>Indicates if <a href="../classes/Event.html#method_stopPropagation" class="crosslink">stopPropagation</a> or
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_stopPropagation" class="crosslink">stopPropagation</a> or
 <a href="../classes/Event.html#method_stopImmediatePropagation" class="crosslink">stopImmediatePropagation</a> has been called on this event.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_removed" class="property item">
-    <h3 class="name"><code>removed</code></h3>
+    <h3 class="name"><code>removed</code>
     <span class="type">Boolean</span>
 
     
@@ -704,6 +732,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -725,23 +755,25 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>Indicates if <a href="../classes/Event.html#method_remove" class="crosslink">remove</a> has been called on this event.</p>
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_remove" class="crosslink">remove</a> has been called on this event.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> false</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_target" class="property item">
-    <h3 class="name"><code>target</code></h3>
+    <h3 class="name"><code>target</code>
     <span class="type">Object</span>
 
     
@@ -751,6 +783,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -772,23 +806,25 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>The object that generated an event.</p>
+    <div class="extended-detail">
+        <div class="description">
+            <p>The object that generated an event.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> null</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> null</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_timeStamp" class="property item">
-    <h3 class="name"><code>timeStamp</code></h3>
+    <h3 class="name"><code>timeStamp</code>
     <span class="type">Number</span>
 
     
@@ -798,6 +834,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -819,23 +857,25 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>The epoch time at which this event was created.</p>
+    <div class="extended-detail">
+        <div class="description">
+            <p>The epoch time at which this event was created.</p>
 
+        </div>
+
+        
+            <p><strong>Default:</strong> 0</p>
+        
+
+        
+
+        
     </div>
-
-    
-        <p><strong>Default:</strong> 0</p>
-    
-
-    
-
-    
 </div>
 
         
             <div id="property_type" class="property item">
-    <h3 class="name"><code>type</code></h3>
+    <h3 class="name"><code>type</code>
     <span class="type">String</span>
 
     
@@ -845,6 +885,8 @@ on this event.</p>
     
 
     
+
+    </h3>
 
     <div class="meta">
         
@@ -866,16 +908,18 @@ on this event.</p>
         
     </div>
 
-    <div class="description">
-        <p>The type of event.</p>
+    <div class="extended-detail">
+        <div class="description">
+            <p>The type of event.</p>
 
+        </div>
+
+        
+
+        
+
+        
     </div>
-
-    
-
-    
-
-    
 </div>
 
         

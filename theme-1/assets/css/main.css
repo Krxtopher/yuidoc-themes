@@ -89,24 +89,20 @@ h5, h6 { font-size:1em; }
 
 /*=== Types ==*/
 
-.type :not(.crosslink),
-.crosslink {
+.item .type {
     border: 1px solid #d9d9d9;
     border-radius: 3px;
     background-color: #eaeaea;
     font-weight: bold;
-    padding: 2px 4px 1px;
+    padding: 2px 6px;
     font-size: 80%;
 }
 
-.crosslink {
-    color: #23579d;
-    text-decoration: none;
-}
 
 /*=== Methods ===*/
 
-.method.item {
+.method.item,
+.property.item {
     padding: 0;
     margin: 1em 0;
     background-color: #fff;
@@ -114,7 +110,8 @@ h5, h6 { font-size:1em; }
     border-radius: 3px;
 }
 
-.method h3 {
+.method h3,
+.property h3 {
     font-size: 16px;
     border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
@@ -125,12 +122,14 @@ h5, h6 { font-size:1em; }
     background-repeat: repeat-x;
 }
 
-.method h3 .type {
+.method h3 .type,
+.property h3 .type {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
 }
 
-.method h3 .flag {
+.method h3 .flag,
+.property h3 .flag {
     font-family: Consolas, Menlo, "Courier New", monospace;
     font-style: italic;
     font-weight: normal;
@@ -139,7 +138,8 @@ h5, h6 { font-size:1em; }
     letter-spacing: -1px;
 }
 
-.method code {
+.method code,
+.property code {
     font-family: Consolas, Menlo, "Courier New", monospace;
 }
 
@@ -158,7 +158,8 @@ h5, h6 { font-size:1em; }
     padding: 0;
 }
 
-.method .meta {
+.method .meta,
+.property .meta {
     background-color: #f8f8f8;
     margin: 0;
     padding: 5px 10px;
@@ -168,19 +169,22 @@ h5, h6 { font-size:1em; }
     font-size: 13px;
 }
 
-.method .meta p {
+.method .meta p,
+.property .meta p {
     margin: 0;
 }
 
-.method .meta a {
+.method .meta a,
+.property .meta a {
     color: #999;
 }
 
-.method .extended-detail {
+.method .extended-detail,
+.property .extended-detail {
     border: 1px solid #cacaca;
     border-top: 1px transparent;
     margin: 0;
-    padding: 10px 15px;
+    padding: 1px 15px;
 }
 
 /*---- Flags ----*/
@@ -188,6 +192,10 @@ h5, h6 { font-size:1em; }
 .flag.optional {
     color: #777;
     font-style: italic;
+}
+.flag.deprecated {
+    color: rgba(0, 0, 0, .2);
+    font-size: 12px;
 }
 
 /* Side Nav */
@@ -257,6 +265,17 @@ ul.index-list {
     column-count: 4;
 }
 
+.index-item:not(.inherited) {
+    font-weight: bold;
+}
+
+.index-item.deprecated {
+    font-style: italic;
+}
+
+.index-item.deprecated a {
+    opacity: .7;
+}
 
 /*---- YUI component style overrides ----*/
 

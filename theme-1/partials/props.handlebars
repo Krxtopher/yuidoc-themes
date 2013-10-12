@@ -1,5 +1,5 @@
 <div id="property_{{name}}" class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">
-    <h3 class="name"><code>{{name}}</code></h3>
+    <h3 class="name"><code>{{name}}</code>
     <span class="type">{{#crossLink type}}{{/crossLink}}</span>
 
     {{#if deprecated}}
@@ -17,6 +17,8 @@
     {{#if static}}
         <span class="flag static">static</span>
     {{/if}}
+
+    </h3>
 
     <div class="meta">
         {{#if overwritten_from}}
@@ -55,65 +57,67 @@
         {{/if}}
     </div>
 
-    <div class="description">
-        {{{propertyDescription}}}
-    </div>
-
-    {{#if default}}
-        <p><strong>Default:</strong> {{default}}</p>
-    {{/if}}
-
-    {{#example}}
-        <div class="example">
-            <h4>Example:</h4>
-
-            <div class="example-content">
-                {{{.}}}
-            </div>
+    <div class="extended-detail">
+        <div class="description">
+            {{{propertyDescription}}}
         </div>
-    {{/example}}
 
-    {{#if subprops}}
-        <h4>Sub-properties:</h4>
+        {{#if default}}
+            <p><strong>Default:</strong> {{default}}</p>
+        {{/if}}
 
-        <ul class="params-list">
-            {{#subprops}}
-            <li class="param">
-                {{#if optional}}
-                    <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>
-                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>
-                    <span class="flag optional" title="This property is optional.">optional</span>
-                {{else}}
-                    <code class="param-name">{{name}}</code>
-                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>
-                {{/if}}
+        {{#example}}
+            <div class="example">
+                <h4>Example:</h4>
 
-                <div class="param-description">
-                    {{{description}}}
+                <div class="example-content">
+                    {{{.}}}
                 </div>
+            </div>
+        {{/example}}
 
-                {{#if subprops}}
-                    <ul class="params-list">
-                        {{#subprops}}
-                        <li class="param">
-                            {{#if optional}}
-                                <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>
-                                <span class="type">{{#crossLink type}}{{/crossLink}}</span>
-                                <span class="flag optional" title="This property is optional.">optional</span>
-                            {{else}}
-                                <code class="param-name">{{name}}</code>
-                                <span class="type">{{#crossLink type}}{{/crossLink}}</span>
-                            {{/if}}
+        {{#if subprops}}
+            <h4>Sub-properties:</h4>
 
-                            <div class="param-description">
-                                {{{description}}}
-                            </div>
-                        </li>
-                        {{/subprops}}
-                    </ul>
-                {{/if}}
-            </li>
-            {{/subprops}}
-        </ul>
-    {{/if}}
+            <ul class="params-list">
+                {{#subprops}}
+                <li class="param">
+                    {{#if optional}}
+                        <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>
+                        <span class="type">{{#crossLink type}}{{/crossLink}}</span>
+                        <span class="flag optional" title="This property is optional.">optional</span>
+                    {{else}}
+                        <code class="param-name">{{name}}</code>
+                        <span class="type">{{#crossLink type}}{{/crossLink}}</span>
+                    {{/if}}
+
+                    <div class="param-description">
+                        {{{description}}}
+                    </div>
+
+                    {{#if subprops}}
+                        <ul class="params-list">
+                            {{#subprops}}
+                            <li class="param">
+                                {{#if optional}}
+                                    <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>
+                                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>
+                                    <span class="flag optional" title="This property is optional.">optional</span>
+                                {{else}}
+                                    <code class="param-name">{{name}}</code>
+                                    <span class="type">{{#crossLink type}}{{/crossLink}}</span>
+                                {{/if}}
+
+                                <div class="param-description">
+                                    {{{description}}}
+                                </div>
+                            </li>
+                            {{/subprops}}
+                        </ul>
+                    {{/if}}
+                </li>
+                {{/subprops}}
+            </ul>
+        {{/if}}
+    </div>
 </div>
