@@ -118,6 +118,24 @@ h5, h6 { font-size:1em; }
 .apidocs ul.commas li:last-child:after { content: ''; }
 
 
+/* Filters */
+
+.protected,
+.private,
+.deprecated {
+    display: none;
+}
+
+.show-protected .protected,
+.show-private .private,
+.show-deprecated .deprecated {
+    display: block;
+}
+
+.hide-inherited .inherited {
+    display: none;
+}
+
 /*=== Types ==*/
 
 .item .type {
@@ -296,8 +314,13 @@ ul.index-list {
     column-count: 4;
 }
 
-.index-item:not(.inherited) {
+.index-item a {
     font-weight: bold;
+}
+
+.index-item.private a,
+.index-item.protected a {
+    font-weight: normal;
 }
 
 .index-item.deprecated {
