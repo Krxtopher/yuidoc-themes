@@ -116,14 +116,11 @@ h5, h6 { font-size:1em; }
 
 .method h3 {
     font-size: 16px;
-    /*background-image: linear-gradient(#5389ca, #3c79b6);*/
-    background-image: linear-gradient(#444444, #333333);
     border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
     margin: 0;
     padding: 10px 10px 4px 10px;
     color: #555;
-
     background-image: linear-gradient(#fafafa, #eaeaea);
     background-repeat: repeat-x;
 }
@@ -224,11 +221,28 @@ ul.apis li {
     background-color: #fafafa;
     border: 1px solid #e5e5e5;
     border-bottom: none;
+    border-top: none;
+}
+
+#api-tabview-panel {
+    background-color: #fff;
+    border: solid #d5d5d5;
+    border-width: 0 1px 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin: 0;
 }
 
 
 
 /*---- YUI component style overrides ----*/
+
+.tabs {
+    background-image: linear-gradient(#fafafa, #eaeaea);
+    border: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 4px 4px 0 0;
+}
 
 .yui3-skin-sam .yui3-tabview-panel {
     background: #fcfcfc;
@@ -242,11 +256,29 @@ ul.apis li {
     width: 200px;
 }
 
-.yui3-tabview-panel {
-    background-color: #fff;
-    border: solid #d5d5d5;
-    border-width: 0 1px 1px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    margin: 0;
+.yui3-tab-selected a {
+    font-weight: bold;
+    color: #333;
+    position: relative;    
 }
+
+.yui3-tab-selected a:before,
+.yui3-tab-selected a:after {
+    border: 8px solid transparent;
+    border-style: outset outset solid outset; /* fixes FF bug */
+    border-bottom-color: #ccc;
+    bottom: 0;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+.yui3-tab-selected a:after {
+    background: transparent; 
+    border-bottom-color: #fafafa;
+    bottom: -1px;
+}
+
