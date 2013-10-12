@@ -92,11 +92,28 @@
     </div>
 {{/if}}
 
+
 {{#if methods}}
     <div class="index-section methods">
         <h3>Methods</h3>
 
         <ul class="index-list methods{{#if extends}} extends{{/if}}">
+
+            {{#is_constructor}}
+                <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}} constructor">
+                    <a href="#method_{{name}}">{{name}}</a>
+
+                    <span class="flag constructor">constructor</span>
+
+                    {{#if static}}
+                        <span class="flag static">static</span>
+                    {{/if}}
+                    {{#if deprecated}}
+                        <span class="flag deprecated">deprecated</span>
+                    {{/if}}
+                </li>
+            {{/is_constructor}}
+
             {{#methods}}
                 <li class="index-item method{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if overwritten_from}} inherited{{/if}}{{#if extended_from}} inherited{{/if}}">
                     <a href="#method_{{name}}">{{name}}</a>

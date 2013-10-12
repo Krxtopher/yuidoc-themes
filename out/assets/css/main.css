@@ -329,7 +329,6 @@ ul.index-list {
 
 .index-item.deprecated a {
     opacity: .7;
-    text-decoration: line-through;
 }
 
 /*---- YUI component style overrides ----*/
