@@ -1,0 +1,7 @@
+{
+	"name" : "CreateJS API",
+	"description" : "A JavaScript API that brings Flash's display list to HTML canvas.",
+	"version" : "0.7.0",
+	"url" : "http://www.createjs.com/#!/EaselJS",
+	"logo" : "http://krisschultz.dreamhosters.com/sample-images/easeljs-logo.png"
+}
