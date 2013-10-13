@@ -12,15 +12,13 @@
 
 <div id="doc">
     <div id="hd" class="header">
-        <div class="">
+        <div class="project-title">
             {{#if projectLogo}}
-                <h1><img class="logo" src="{{projectLogo}}" title="{{projectName}}"></h1>
-            {{else}}
-                <h1><img class="logo" src="{{projectAssets}}/css/logo.png" title="{{projectName}}"></h1>
+                <img class="logo" src="{{projectLogo}}" title="{{projectName}}">
             {{/if}}
-        </div>
-        <div class="version">
-            <em>API Docs for: {{projectVersion}}</em>
+            {{#if projectName}}
+                <h1 class="project-name">{{projectName}}</h1>{{#if projectVersion}} <span class="project-version">{{projectVersion}}</span>{{/if}}
+            {{/if}}
         </div>
     </div>
     <div id="bd" class="">
