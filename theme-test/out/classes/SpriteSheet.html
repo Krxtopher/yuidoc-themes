@@ -1,0 +1,3612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SpriteSheet - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <div id="hd" class="header">
+        <div class="project-title">
+            
+                <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+            
+            
+                <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+            
+
+            <a href="#index" class="index-jump-link">back to index</a>
+
+        </div>
+    </div>
+    <div id="bd" class="">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1>SpriteSheet Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/EventDispatcher.html" class="crosslink">EventDispatcher</a>
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l38"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:38</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/EaselJS.html">EaselJS</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Encapsulates the properties and methods associated with a sprite sheet. A sprite sheet is a series of images (usually
+animation frames) combined into a larger image (or images). For example, an animation consisting of eight 100x100
+images could be combined into a single 400x200 sprite sheet (4 frames across by 2 high).</p>
+<p>The data passed to the SpriteSheet constructor defines three critical pieces of information:<ol>
+   <li> The image or images to use.</li>
+   <li> The positions of individual image frames. This data can be represented in one of two ways:
+   As a regular grid of sequential, equal-sized frames, or as individually defined, variable sized frames arranged in
+   an irregular (non-sequential) fashion.</li>
+   <li> Likewise, animations can be represented in two ways: As a series of sequential frames, defined by a start and
+   end frame [0,3], or as a list of frames [0,1,2,3].</li>
+</OL></p>
+<h4>SpriteSheet Format</h4>
+
+<pre class="code prettyprint"><code> data = {
+     // DEFINING FRAMERATE:
+     // this specifies the framerate that will be set on the SpriteSheet. See Spritesheet.framerate
+     // for more information.
+     framerate: 20,
+
+     // DEFINING IMAGES:
+     // list of images or image URIs to use. SpriteSheet can handle preloading.
+     // the order dictates their index value for frame definition.
+     images: [image1, &quot;path/to/image2.png&quot;],
+
+     // DEFINING FRAMES:
+        // the simple way to define frames, only requires frame size because frames are consecutive:
+        // define frame width/height, and optionally the frame count and registration point x/y.
+        // if count is omitted, it will be calculated automatically based on image dimensions.
+        frames: {width:64, height:64, count:20, regX: 32, regY:64},
+
+        // OR, the complex way that defines individual rects for frames.
+        // The 5th value is the image index per the list defined in &quot;images&quot; (defaults to 0).
+        frames: [
+            // x, y, width, height, imageIndex, regX, regY
+            [0,0,64,64,0,32,64],
+            [64,0,96,64,0]
+        ],
+
+     // DEFINING ANIMATIONS:
+
+        // simple animation definitions. Define a consecutive range of frames (begin to end inclusive).
+        // optionally define a &quot;next&quot; animation to sequence to (or false to stop) and a playback &quot;speed&quot;
+        animations: {
+            // start, end, next, speed
+            run: [0,8],
+            jump: [9,12,&quot;run&quot;,2]
+        }
+
+     // the complex approach which specifies every frame in the animation by index.
+     animations: {
+         run: {
+             frames: [1,2,3,3,2,1]
+         },
+         jump: {
+             frames: [1,4,5,6,1],
+             next: &quot;run&quot;,
+             speed: 2
+         },
+         stand: { frames: [7] }
+     }
+
+        // the above two approaches can be combined, you can also use a single frame definition:
+        animations: {
+            run: [0,8,true,2],
+            jump: {
+                frames: [8,9,10,9,8],
+                next: &quot;run&quot;,
+                speed: 2
+            },
+            stand: 7
+        }
+ }</code></pre>
+<p><h4>Example</h4>
+To define a simple sprite sheet, with a single image &quot;sprites.jpg&quot; arranged in a regular 50x50 grid with two
+animations, &quot;run&quot; looping from frame 0-4 inclusive, and &quot;jump&quot; playing from frame 5-8 and sequencing back to run:</p>
+<pre class="code prettyprint"><code> var data = {
+     images: [&quot;sprites.jpg&quot;],
+     frames: {width:50, height:50},
+     animations: {run:[0,4], jump:[5,8,&quot;run&quot;]}
+ };
+ var spriteSheet = new createjs.SpriteSheet(data);
+ var animation = new createjs.Sprite(spriteSheet, &quot;run&quot;);</code></pre>
+
+</div>
+
+<!-- Class member index -->
+
+<a name="index" class="anchor-link"></a>
+<div class="index">
+<h2>Index</h2>
+
+    <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited">
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+
+
+    <div class="index-section properties">
+        <h3>Properties</h3>
+
+        <ul class="index-list properties extends">
+            
+                <li class="index-item property protected">
+                    <a href="#property__animations">_animations</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected inherited">
+                    <a href="#property__captureListeners">_captureListeners</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__data">_data</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__frameHeight">_frameHeight</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__frames">_frames</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__frameWidth">_frameWidth</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__images">_images</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected inherited">
+                    <a href="#property__listeners">_listeners</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__loadCount">_loadCount</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__numFrames">_numFrames</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__regX">_regX</a>
+
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property__regY">_regY</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_complete">complete</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_framerate">framerate</a>
+
+                    
+                </li>
+            
+                <li class="index-item property deprecated">
+                    <a href="#property_onComplete">onComplete</a>
+
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+
+
+
+    <div class="index-section methods">
+        <h3>Methods</h3>
+
+        <ul class="index-list methods extends">
+
+            
+                <li class="index-item method constructor">
+                    <a href="#method_SpriteSheet">SpriteSheet</a>
+
+                    <span class="flag constructor">constructor</span>
+
+                    
+                    
+                </li>
+            
+
+            
+                <li class="index-item method protected">
+                    <a href="#method__calculateFrames">_calculateFrames</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected inherited">
+                    <a href="#method__dispatchEvent">_dispatchEvent</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected">
+                    <a href="#method__handleImageLoad">_handleImageLoad</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_addEventListener">addEventListener</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_clone">clone</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_dispatchEvent">dispatchEvent</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_getAnimation">getAnimation</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_getAnimations">getAnimations</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_getFrame">getFrame</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_getFrameBounds">getFrameBounds</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_getNumFrames">getNumFrames</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_hasEventListener">hasEventListener</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected inherited">
+                    <a href="#method_initialize">initialize</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_off">off</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_on">on</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_removeAllEventListeners">removeAllEventListeners</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_removeEventListener">removeEventListener</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method inherited">
+                    <a href="#method_toString">toString</a>
+
+                    
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+        <div class="index-section events">
+            <h3>Events</h3>
+
+            <ul class="index-list events extends">
+                
+                    <li class="index-item event">
+                        <a href="#event_complete">complete</a>
+
+                        
+                        
+                    </li>
+                
+            </ul>
+        </div>
+    
+</div>
+
+
+<div>
+
+
+    <div class="properties-detail">
+        <h2>Properties</h2>
+
+        
+            <div id="property__animations" class="property item protected">
+    <h3 class="name"><code>_animations</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l181"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:181</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__captureListeners" class="property item protected inherited">
+    <h3 class="name"><code>_captureListeners</code>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#property__captureListeners">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l125"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:125</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__data" class="property item protected">
+    <h3 class="name"><code>_data</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l199"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:199</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__frameHeight" class="property item protected">
+    <h3 class="name"><code>_frameHeight</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l212"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:212</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__frames" class="property item protected">
+    <h3 class="name"><code>_frames</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l187"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:187</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__frameWidth" class="property item protected">
+    <h3 class="name"><code>_frameWidth</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l218"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:218</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__images" class="property item protected">
+    <h3 class="name"><code>_images</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l193"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:193</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__listeners" class="property item protected inherited">
+    <h3 class="name"><code>_listeners</code>
+    <span class="type">Object</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#property__listeners">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l118"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:118</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__loadCount" class="property item protected">
+    <h3 class="name"><code>_loadCount</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l205"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:205</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__numFrames" class="property item protected">
+    <h3 class="name"><code>_numFrames</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l224"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:224</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__regX" class="property item protected">
+    <h3 class="name"><code>_regX</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l230"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:230</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property__regY" class="property item protected">
+    <h3 class="name"><code>_regY</code>
+    <span class="type">Unknown</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l236"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:236</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_complete" class="property item">
+    <h3 class="name"><code>complete</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l154"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:154</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates whether all images are finished loading.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_framerate" class="property item">
+    <h3 class="name"><code>framerate</code>
+    <span class="type">Number</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l163"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:163</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Specifies the framerate to use by default for Sprite instances using the SpriteSheet. See
+Sprite.framerate for more information.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_onComplete" class="property item deprecated">
+    <h3 class="name"><code>onComplete</code>
+    <span class="type">Function</span>
+
+    
+        <span class="flag deprecated" title="Use addEventListener and the &quot;complete&quot; event.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l172"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:172</code></a>
+        
+        </p>
+
+        
+            <p>Deprecated: Use addEventListener and the &quot;complete&quot; event.</p>
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>REMOVED. Use <a href="../classes/EventDispatcher.html#method_addEventListener" class="crosslink">addEventListener</a> and the <a href="../classes/SpriteSheet.html#event_complete" class="crosslink">complete</a>
+event.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_SpriteSheet" class="method item">
+    <h3 class="name"><code>SpriteSheet</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>data</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l38"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:38</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">data</code>
+                            <span class="type">Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An object describing the SpriteSheet data.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+    </div>
+
+
+
+    <div class="methods-detail">
+        <h2>Methods</h2>
+
+        
+            <div id="method__calculateFrames" class="method item protected">
+    <h3 class="name"><code>_calculateFrames</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l445"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:445</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method__dispatchEvent" class="method item protected inherited">
+    <h3 class="name"><code>_dispatchEvent</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>eventObj</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>eventPhase</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method__dispatchEvent">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l348"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:348</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">eventObj</code>
+                            <span class="type">Object | String | <a href="../classes/Event.html" class="crosslink">Event</a></span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">eventPhase</code>
+                            <span class="type">Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method__handleImageLoad" class="method item protected">
+    <h3 class="name"><code>_handleImageLoad</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l433"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:433</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_addEventListener" class="method item inherited">
+    <h3 class="name"><code>addEventListener</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[useCapture]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Function | Object</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_addEventListener">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l141"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:141</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p><p>Adds the specified event listener. Note that adding multiple listeners to the same function will result in
+multiple callbacks getting fired.</p></p>
+<h4>Example</h4>
+
+<pre class="code prettyprint"><code> displayObject.addEventListener(&quot;click&quot;, handleClick);
+ function handleClick(event) {
+    // Click happened.
+ }</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">listener</code>
+                            <span class="type">Function | Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An object with a handleEvent method, or a function that will be called when
+the event is dispatched.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[useCapture]</code>
+                            <span class="type">Boolean</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>For events that bubble, indicates whether to listen for the event in the capture or bubbling/target phase.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Function | Object</span>:
+                        
+                        <p>Returns the listener for chaining or assignment.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_clone" class="method item">
+    <h3 class="name"><code>clone</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/SpriteSheet.html" class="crosslink">SpriteSheet</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l412"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:412</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a clone of the SpriteSheet instance.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/SpriteSheet.html" class="crosslink">SpriteSheet</a></span>:
+                        
+                        <p>a clone of the SpriteSheet instance.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_dispatchEvent" class="method item inherited">
+    <h3 class="name"><code>dispatchEvent</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>eventObj</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[target]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_dispatchEvent">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l279"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:279</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p><p>Dispatches the specified event to all listeners.</p></p>
+<h4>Example</h4>
+
+<pre class="code prettyprint"><code> // Use a string event
+ this.dispatchEvent(&quot;complete&quot;);
+
+ // Use an Event instance
+ var event = new createjs.Event(&quot;progress&quot;);
+ this.dispatchEvent(event);</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">eventObj</code>
+                            <span class="type">Object | String | <a href="../classes/Event.html" class="crosslink">Event</a></span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An object with a &quot;type&quot; property, or a string type.
+While a generic object will work, it is recommended to use a CreateJS Event instance. If a string is used,
+dispatchEvent will construct an Event instance with the specified type.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[target]</code>
+                            <span class="type">Object</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The object to use as the target property of the event object. This will default to the
+dispatching object. <b>This parameter is deprecated and will be removed.</b></p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Boolean</span>:
+                        
+                        <p>Returns the value of eventObj.defaultPrevented.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_getAnimation" class="method item">
+    <h3 class="name"><code>getAnimation</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>name</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l355"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:355</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns an object defining the specified animation. The returned object contains:<UL>
+    <LI>frames: an array of the frame ids in the animation</LI>
+    <LI>speed: the playback speed for this animation</LI>
+    <LI>name: the name of the animation</LI>
+    <LI>next: the default animation to play next. If the animation loops, the name and next property will be the
+    same.</LI>
+</UL></p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">name</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The name of the animation to get.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Object</span>:
+                        
+                        <p>a generic object with frames, speed, name, and next properties.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_getAnimations" class="method item">
+    <h3 class="name"><code>getAnimations</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l346"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:346</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns an array of all available animation names as strings.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Array</span>:
+                        
+                        <p>an array of animation names available on this sprite sheet.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_getFrame" class="method item">
+    <h3 class="name"><code>getFrame</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>frameIndex</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l371"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:371</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns an object specifying the image and source rect of the specified frame. The returned object has:<UL>
+    <LI>an image property holding a reference to the image object in which the frame is found</LI>
+    <LI>a rect property containing a Rectangle instance which defines the boundaries for the frame within that
+    image.</LI>
+</UL></p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">frameIndex</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The index of the frame.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Object</span>:
+                        
+                        <p>a generic object with image and rect properties. Returns null if the frame does not exist.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_getFrameBounds" class="method item">
+    <h3 class="name"><code>getFrameBounds</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>frameIndex</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[rectangle]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/Rectangle.html" class="crosslink">Rectangle</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l387"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:387</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a <a href="../classes/Rectangle.html" class="crosslink">Rectangle</a> instance defining the bounds of the specified frame relative
+to the origin. For example, a 90 x 70 frame with a regX of 50 and a regY of 40 would return:</p>
+<pre class="code prettyprint"><code> [x=-50, y=-40, width=90, height=70]</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">frameIndex</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The index of the frame.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[rectangle]</code>
+                            <span class="type"><a href="../classes/Rectangle.html" class="crosslink">Rectangle</a></span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>A Rectangle instance to copy the values into. By default a new instance is created.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/Rectangle.html" class="crosslink">Rectangle</a></span>:
+                        
+                        <p>A Rectangle instance. Returns null if the frame does not exist, or the image is not fully loaded.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_getNumFrames" class="method item">
+    <h3 class="name"><code>getNumFrames</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>animation</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l329"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:329</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns the total number of frames in the specified animation, or in the whole sprite
+sheet if the animation param is omitted.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">animation</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The name of the animation to get a frame count for.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Number</span>:
+                        
+                        <p>The number of frames in the animation, or in the entire sprite sheet if the animation param is omitted.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_hasEventListener" class="method item inherited">
+    <h3 class="name"><code>hasEventListener</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_hasEventListener">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l328"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:328</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Indicates whether there is at least one listener for the specified event type and <code>useCapture</code> value.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Boolean</span>:
+                        
+                        <p>Returns true if there is at least one listener for the specified event.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_initialize" class="method item protected">
+    <h3 class="name"><code>initialize</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>data</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/EventDispatcher.html#method_initialize">
+                EventDispatcher
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l243"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:243</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">data</code>
+                            <span class="type">Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An object describing the SpriteSheet data.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_off" class="method item inherited">
+    <h3 class="name"><code>off</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[useCapture]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_off">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l246"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:246</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>A shortcut to the removeEventListener method, with the same parameters and return value. This is a companion to the
+.on method.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">listener</code>
+                            <span class="type">Function | Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The listener function or object.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[useCapture]</code>
+                            <span class="type">Boolean</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>For events that bubble, indicates whether to listen for the event in the capture or bubbling/target phase.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_on" class="method item inherited">
+    <h3 class="name"><code>on</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[scope]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[once=false]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[data]</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[useCapture=false]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Function</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_on">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l174"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:174</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p><p>A shortcut method for using addEventListener that makes it easier to specify an execution scope, have a listener
+only run once, associate arbitrary data with the listener, and remove the listener.</p></p>
+<p><p>This method works by creating an anonymous wrapper function and subscribing it with addEventListener.
+The created anonymous function is returned for use with .removeEventListener (or .off).</p></p>
+<h4>Example</h4>
+
+<pre class="code prettyprint"><code>    var listener = myBtn.on(&quot;click&quot;, handleClick, null, false, {count:3});
+    function handleClick(evt, data) {
+        data.count -= 1;
+        console.log(this == myBtn); // true - scope defaults to the dispatcher
+        if (data.count == 0) {
+            alert(&quot;clicked 3 times!&quot;);
+            myBtn.off(&quot;click&quot;, listener);
+            // alternately: evt.remove();
+        }
+    }</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">listener</code>
+                            <span class="type">Function | Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An object with a handleEvent method, or a function that will be called when
+the event is dispatched.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[scope]</code>
+                            <span class="type">Object</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The scope to execute the listener in. Defaults to the dispatcher/currentTarget for function listeners, and to the listener itself for object listeners (ie. using handleEvent).</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[once=false]</code>
+                            <span class="type">Boolean</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>If true, the listener will remove itself after the first time it is triggered.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[data]</code>
+                            <span class="type"></span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>Arbitrary data that will be included as the second parameter when the listener is called.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[useCapture=false]</code>
+                            <span class="type">Boolean</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>For events that bubble, indicates whether to listen for the event in the capture or bubbling/target phase.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Function</span>:
+                        
+                        <p>Returns the anonymous function that was created and assigned as the listener. This is needed to remove the listener later using .removeEventListener.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_removeAllEventListeners" class="method item inherited">
+    <h3 class="name"><code>removeAllEventListeners</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[type]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_removeAllEventListeners">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l257"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:257</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p><p>Removes all listeners for the specified type, or all listeners of all types.</p></p>
+<h4>Example</h4>
+
+<pre class="code prettyprint"><code> // Remove all listeners
+ displayObject.removeAllEvenListeners();
+
+ // Remove all click listeners
+ displayObject.removeAllEventListeners(&quot;click&quot;);</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[type]</code>
+                            <span class="type">String</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event. If omitted, all listeners for all types will be removed.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_removeEventListener" class="method item inherited">
+    <h3 class="name"><code>removeEventListener</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>listener</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[useCapture]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/EventDispatcher.html#method_removeEventListener">EventDispatcher</a>:
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_EventDispatcher.js.html#l216"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;EventDispatcher.js:216</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p><p>Removes the specified event listener.</p></p>
+<p><p><b>Important Note:</b> that you must pass the exact function reference used when the event was added. If a proxy
+function, or function closure is used as the callback, the proxy/closure reference must be used - a new proxy or
+closure will not work.</p></p>
+<h4>Example</h4>
+
+<pre class="code prettyprint"><code> displayObject.removeEventListener(&quot;click&quot;, handleClick);</code></pre>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The string type of the event.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">listener</code>
+                            <span class="type">Function | Object</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The listener function or object.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name optional">[useCapture]</code>
+                            <span class="type">Boolean</span>
+                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>For events that bubble, indicates whether to listen for the event in the capture or bubbling/target phase.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_toString" class="method item">
+    <h3 class="name"><code>toString</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            <p>Inherited from
+            <a href="../classes/EventDispatcher.html#method_toString">
+                EventDispatcher
+            </a>
+            
+            but overwritten in
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l403"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:403</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a string representation of this object.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">String</span>:
+                        
+                        <p>a string representation of the instance.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+    <div class="events-detail">
+        <h2>Events</h2>
+
+        
+            <div id="event_complete" class="events item">
+    <h3 class="name"><code>complete</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_display_SpriteSheet.js.html#l138"><code>sample-src&#x2F;easeljs&#x2F;display&#x2F;SpriteSheet.js:138</code></a>
+        
+        </p>
+
+        
+
+        
+            <p>Available since 0.6.0</p>
+        
+    </div>
+
+    <div class="description">
+        <p>Dispatched when all images are loaded.  Note that this only fires if the images
+were not fully loaded when the sprite sheet was initialized. You should check the complete property
+to prior to adding a listener. Ex.</p>
+<pre class="code prettyprint"><code>var sheet = new SpriteSheet(data);
+if (!sheet.complete) {
+ &nbsp; // not preloaded, listen for the complete event:
+ &nbsp; sheet.addEventListener("complete", handler);
+}</code></pre>
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">target</code>
+                        <span class="type">Object</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The object that dispatched the event.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The event type.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+        
+    </div>
+
+
+</div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/vendor/waypoints.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

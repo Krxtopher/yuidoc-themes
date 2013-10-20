@@ -137,6 +137,28 @@ h5, h6 { font-size:1em; }
     height: 44px;
 }
 
+.index-jump-link {
+    border: 1px solid rgba(180, 180, 180, .6);
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.index-offscreen .index-jump-link {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.anchor-link {
+    height: 0;
+    position: relative;
+    top: -220px;
+    display: block;
+}
+
 .content {
     padding: 18px;
 }
