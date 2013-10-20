@@ -80,7 +80,16 @@ h4 {
 
 h5, h6 { font-size:1em; }
 
-#hd {
+.sticky {  
+    position: fixed;  
+    width: 100%;  
+    left: 0;  
+    top: 0;  
+    z-index: 100;  
+    border-top: 0;  
+}
+
+.header {
     background-image: linear-gradient(#3a3a3a, #2a2a2a);
     background-repeat: repeat-x;
     text-shadow: 0 -1px 0 rbga(0, 0, 0, 1);
@@ -88,8 +97,7 @@ h5, h6 { font-size:1em; }
     color: #fff;
 }
 
-#hd h1.project-name {
-    margin: 0;
+.header h1.project-name {
     display: inline;
     margin: 0 10px 0 10px;
     padding: 0;
@@ -99,16 +107,21 @@ h5, h6 { font-size:1em; }
     height: 60px;
 }
 
-#hd img.logo {
+.header img.logo {
     max-height: 64px;
     max-width: 64px;
     vertical-align: top;
     position: absolute;
     top: 8px;
     left: 8px;
+    transition: left 0.5s;
 }
 
-#hd .project-title {
+.header.sticky img.logo {
+    left: -100px;
+}
+
+.header .project-title {
     height: 60px;
     position: relative;
     top: 0;
@@ -116,6 +129,12 @@ h5, h6 { font-size:1em; }
     display: table-cell;
     vertical-align: middle;
     padding-left: 74px;
+    transition: padding 0.5s, height .5s;
+}
+
+.header.sticky .project-title {
+    padding-left: 0px;
+    height: 44px;
 }
 
 .content {
