@@ -5,6 +5,8 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    margin-top: 80px;
+    text-align: center;
 }
 
 pre, code {
@@ -80,16 +82,13 @@ h4 {
 
 h5, h6 { font-size:1em; }
 
-.sticky {  
+.main-header {
     position: fixed;  
     width: 100%;  
     left: 0;  
     top: 0;  
     z-index: 100;  
-    border-top: 0;  
-}
-
-.header {
+    text-align: center;
     background-image: linear-gradient(#3a3a3a, #2a2a2a);
     background-repeat: repeat-x;
     text-shadow: 0 -1px 0 rbga(0, 0, 0, 1);
@@ -97,44 +96,94 @@ h5, h6 { font-size:1em; }
     color: #fff;
 }
 
-.header h1.project-name {
+.main-header.compact {
+    box-shadow: 0 0px 7px 1px rgba(0, 0, 0, .6);
+}
+
+.main-header .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    height: 60px;
+    transition: height 0.2s;
+}
+
+.main-header.compact .content {
+    height: 44px;
+    transition: height 0.5s;
+}
+
+.main-header h1.project-name {
     display: inline;
-    margin: 0 10px 0 10px;
     padding: 0;
     font-size: 24px;
     color: #fff;
     border: none;
-    height: 60px;
+    padding-right: 8px;
 }
 
-.header img.logo {
+.main-header img.logo {
     max-height: 64px;
     max-width: 64px;
     vertical-align: top;
     position: absolute;
-    top: 8px;
+    top: 0px;
     left: 8px;
-    transition: left 0.5s;
+    transition: top 0.4s ease 0.5s;
 }
 
-.header.sticky img.logo {
-    left: -100px;
+.main-header.compact img.logo {
+    top: -100px;
+    transition: top 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-.header .project-title {
-    height: 60px;
+.main-header .project-title {
     position: relative;
-    top: 0;
-    left: 0;
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 74px;
-    transition: padding 0.5s, height .5s;
+    top: 8px;
+    padding-left: 84px;
+    transition: padding 0.5s, top 0.5s;
+    transition-delay: 0.2s, 0s;
+    float: left;
 }
 
-.header.sticky .project-title {
-    padding-left: 0px;
-    height: 44px;
+.main-header.compact .project-title {
+    top: 2px;
+    padding-left: 10px;
+    transition-delay: 0.25s, 0s;
+}
+
+.main-header .description {
+    display: none;
+}
+
+.jump-links {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    list-style: none;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    text-align: right;
+    color: #15a9fe;
+    text-shadow: none;
+    transition: bottom 0.2s;
+}
+
+.compact .jump-links {
+    bottom: 9px;
+}
+
+.jump-links a {
+    color: #15a9fe;
+}
+
+.jump-links li {
+    display: inline;
+    margin: 0 10px;
 }
 
 .anchor-link {
@@ -144,11 +193,19 @@ h5, h6 { font-size:1em; }
     top: -50px;
 }
 
+.top-jump-link {
+    opacity: 0;
+    transition: opacity 0.5s ease 0;
+    pointer-events: none;
+}
+
+.compact .top-jump-link {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease 0.5s;
+}
+
 .index-jump-link {
-    border: 1px solid rgba(180, 180, 180, .6);
-    border-radius: 4px;
-    padding: 6px 10px;
-    color: #999;
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
@@ -159,11 +216,17 @@ h5, h6 { font-size:1em; }
     pointer-events: auto;
 }
 
-.content {
-    padding: 18px;
+.main-body {
+    max-width: 1200px;
+    text-align: left;
+    margin: 0 auto;
 }
 
-.content>h1 {
+.main-body .content {
+    padding: 28px 18px;
+}
+
+.main-body .content>h1 {
     margin-top: 0;
 }
 
@@ -368,11 +431,15 @@ ul.apis li {
     /*border: 1px solid #e5e5e5;*/
     padding: 10px 20px;
     margin: 30px 0;
-    background-color: #fafafa;
+    background-color: #f6f6f6;
 }
 
 .index h2 {
     display: none;
+}
+
+#api-options label {
+    margin: 0 0 0 25px;
 }
 
 ul.index-list {
