@@ -16,6 +16,7 @@ pre, code {
 a {
     color: #4183c4;
     text-decoration: none;
+    outline: none;
 }
 
 a:hover {
@@ -494,7 +495,8 @@ ul.index-list {
 .yui3-tab-selected a {
     font-weight: bold;
     color: #333;
-    position: relative;    
+    text-decoration: none;
+    position: relative;   
 }
 
 .yui3-tab-selected a:before,
