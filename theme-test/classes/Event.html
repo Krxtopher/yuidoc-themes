@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Event - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">&uarr; index</a></li>
+                <li><a href="#top" class="top-jump-link">&uarr; top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1>Event Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/sample-src_createjs_events_Event.js.html#l46"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:46</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/CreateJS.html">CreateJS</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Contains properties and methods shared by all events for use with
+<a href="../classes/EventDispatcher.html" class="crosslink">EventDispatcher</a>.</p>
+<p>Note that Event objects are often reused, so you should never
+rely on an event object&#39;s state outside of the call stack it was received in.</p>
+
+</div>
+
+<!-- Class member index -->
+
+<a name="index" class="anchor-link"></a>
+<div class="index">
+<h2>Index</h2>
+
+    <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited">
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+
+
+    <div class="index-section properties">
+        <h3>Properties</h3>
+
+        <ul class="index-list properties">
+            
+                <li class="index-item property">
+                    <a href="#property_bubbles">bubbles</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_cancelable">cancelable</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_currentTarget">currentTarget</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_defaultPrevented">defaultPrevented</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_eventPhase">eventPhase</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_immediatePropagationStopped">immediatePropagationStopped</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_propagationStopped">propagationStopped</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_removed">removed</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_target">target</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_timeStamp">timeStamp</a>
+
+                    
+                </li>
+            
+                <li class="index-item property">
+                    <a href="#property_type">type</a>
+
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+
+
+
+    <div class="index-section methods">
+        <h3>Methods</h3>
+
+        <ul class="index-list methods">
+
+            
+                <li class="index-item method constructor">
+                    <a href="#method_Event">Event</a>
+
+                    <span class="flag constructor">constructor</span>
+
+                    
+                    
+                </li>
+            
+
+            
+                <li class="index-item method">
+                    <a href="#method_clone">clone</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected">
+                    <a href="#method_initialize">initialize</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_preventDefault">preventDefault</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_remove">remove</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_stopImmediatePropagation">stopImmediatePropagation</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_stopPropagation">stopPropagation</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_toString">toString</a>
+
+                    
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+</div>
+
+
+<div>
+
+
+    <div class="properties-detail">
+        <h2>Properties</h2>
+
+        
+            <div id="property_bubbles" class="property item">
+    <h3 class="name"><code>bubbles</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l108"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:108</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates whether the event will bubble through the display list.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_cancelable" class="property item">
+    <h3 class="name"><code>cancelable</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l117"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:117</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates whether the default behaviour of this event can be cancelled via
+<a href="../classes/Event.html#method_preventDefault" class="crosslink">preventDefault</a>. This is set via the Event constructor.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_currentTarget" class="property item">
+    <h3 class="name"><code>currentTarget</code>
+    <span class="type">Object</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l83"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:83</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>The current target that a bubbling event is being dispatched from. For non-bubbling events, this will
+always be the same as target. For example, if childObj.parent = parentObj, and a bubbling event
+is generated from childObj, then a listener on parentObj would receive the event with
+target=childObj (the original target) and currentTarget=parentObj (where the listener was added).</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> null</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_defaultPrevented" class="property item">
+    <h3 class="name"><code>defaultPrevented</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l136"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:136</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_preventDefault" class="crosslink">preventDefault</a> has been called
+on this event.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_eventPhase" class="property item">
+    <h3 class="name"><code>eventPhase</code>
+    <span class="type">Number</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l95"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:95</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>For bubbling events, this indicates the current event phase:<OL>
+    <LI> capture phase: starting from the top parent to the target</LI>
+    <LI> at target phase: currently being dispatched from the target</LI>
+    <LI> bubbling phase: from the target to the top parent</LI>
+</OL></p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> 0</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_immediatePropagationStopped" class="property item">
+    <h3 class="name"><code>immediatePropagationStopped</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l156"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:156</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_stopImmediatePropagation" class="crosslink">stopImmediatePropagation</a> has been called
+on this event.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_propagationStopped" class="property item">
+    <h3 class="name"><code>propagationStopped</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l146"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:146</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_stopPropagation" class="crosslink">stopPropagation</a> or
+<a href="../classes/Event.html#method_stopImmediatePropagation" class="crosslink">stopImmediatePropagation</a> has been called on this event.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_removed" class="property item">
+    <h3 class="name"><code>removed</code>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l166"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:166</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Indicates if <a href="../classes/Event.html#method_remove" class="crosslink">remove</a> has been called on this event.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> false</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_target" class="property item">
+    <h3 class="name"><code>target</code>
+    <span class="type">Object</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l74"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:74</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>The object that generated an event.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> null</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_timeStamp" class="property item">
+    <h3 class="name"><code>timeStamp</code>
+    <span class="type">Number</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l127"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:127</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>The epoch time at which this event was created.</p>
+
+        </div>
+
+        
+            <p><strong>Default:</strong> 0</p>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_type" class="property item">
+    <h3 class="name"><code>type</code>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l67"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:67</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>The type of event.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_Event" class="method item">
+    <h3 class="name"><code>Event</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>bubbles</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cancelable</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l46"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:46</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The event type.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">bubbles</code>
+                            <span class="type">Boolean</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>Indicates whether the event will bubble through the display list.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">cancelable</code>
+                            <span class="type">Boolean</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>Indicates whether the default behaviour of this event can be cancelled.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+    </div>
+
+
+
+    <div class="methods-detail">
+        <h2>Methods</h2>
+
+        
+            <div id="method_clone" class="method item">
+    <h3 class="name"><code>clone</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/Event.html" class="crosslink">Event</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l235"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:235</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a clone of the Event instance.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/Event.html" class="crosslink">Event</a></span>:
+                        
+                        <p>a clone of the Event instance.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_initialize" class="method item protected">
+    <h3 class="name"><code>initialize</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>type</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>bubbles</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>cancelable</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l176"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:176</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Initialization method.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">type</code>
+                            <span class="type">String</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The event type.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">bubbles</code>
+                            <span class="type">Boolean</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>Indicates whether the event will bubble through the display list.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">cancelable</code>
+                            <span class="type">Boolean</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>Indicates whether the default behaviour of this event can be cancelled.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_preventDefault" class="method item">
+    <h3 class="name"><code>preventDefault</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l193"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:193</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Sets Event/defaultPrevented to true.
+Mirrors the DOM event standard.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_remove" class="method item">
+    <h3 class="name"><code>remove</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l221"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:221</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Causes the active listener to be removed via removeEventListener();</p>
+<pre class="code prettyprint"><code>    myBtn.addEventListener(&quot;click&quot;, function(evt) {
+        // do stuff...
+        evt.remove(); // removes this listener.
+    });</code></pre>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_stopImmediatePropagation" class="method item">
+    <h3 class="name"><code>stopImmediatePropagation</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l211"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:211</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Sets Event/propagationStopped and
+Event/immediatePropagationStopped to true.
+Mirrors the DOM event standard.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_stopPropagation" class="method item">
+    <h3 class="name"><code>stopPropagation</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l202"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:202</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Sets Event/propagationStopped to true.
+Mirrors the DOM event standard.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_toString" class="method item">
+    <h3 class="name"><code>toString</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_createjs_events_Event.js.html#l244"><code>sample-src&#x2F;createjs&#x2F;events&#x2F;Event.js:244</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a string representation of this object.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">String</span>:
+                        
+                        <p>a string representation of the instance.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+
+</div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-ks-scroll-styles.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
