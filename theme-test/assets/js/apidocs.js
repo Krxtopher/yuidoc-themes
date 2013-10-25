@@ -1,3 +1,5 @@
+/*global YUI, prettyPrint, $*/
+
 YUI().use(
     'yuidoc-meta',
     'api-list', 'history-hash', 'node-screen', 'node-style', 'pjax',
@@ -13,9 +15,6 @@ var win          = Y.config.win,
 
     classTabView,
     selectedTab;
-
-// KSchultz
-$(".main-header").addClassWhenItemAboveViewport("compact", "body", 20);
 
 // Kill pjax functionality unless serving over HTTP.
 if (!Y.getLocation().protocol.match(/^https?\:/)) {
@@ -294,9 +293,6 @@ pjax.handleClasses = function (req, res, next) {
     pjax.updateVisibility();
     Y.one('#api-options').delegate('click', pjax.onOptionClick, 'input');
 
-    // KSchultz
-    $("body").addClassWhenItemAboveViewport("index-offscreen", ".index", -100);
-
     next();
 };
 
@@ -373,5 +369,12 @@ Y.APIList.rootPath = pjax.get('root');
 Y.on('hashchange', function (e) {
     pjax.updateTabState('hashchange');
 }, win);
+
+Y.on('domready', function () {
+    $('.main-header').addClassWhenItemAboveViewport('compact', 'body', 20);
+    if ($('.index').length) {
+        $('body').addClassWhenItemAboveViewport('index-offscreen', '.index', -100);
+    }
+});
 
 });
