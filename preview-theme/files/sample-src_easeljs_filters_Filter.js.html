@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>sample-src/easeljs/filters/Filter.js - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">&uarr; index</a></li>
+                <li><a href="#top" class="top-jump-link">&uarr; top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1 class="file-heading">File: sample-src/easeljs/filters/Filter.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+* Filter
+* Visit http://createjs.com/ for documentation, updates and examples.
+*
+* Copyright (c) 2010 gskinner.com, inc.
+*
+* Permission is hereby granted, free of charge, to any person
+* obtaining a copy of this software and associated documentation
+* files (the &quot;Software&quot;), to deal in the Software without
+* restriction, including without limitation the rights to use,
+* copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the
+* Software is furnished to do so, subject to the following
+* conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+* OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/**
+ * @module EaselJS
+ */
+
+// namespace:
+this.createjs = this.createjs||{};
+
+(function() {
+	&quot;use strict&quot;;
+
+/**
+ * Base class that all filters should inherit from. Filters need to be applied to objects that have been cached using
+ * the {{#crossLink &quot;DisplayObject/cache&quot;}}{{/crossLink}} method. If an object changes, please cache it again, or use
+ * {{#crossLink &quot;DisplayObject/updateCache&quot;}}{{/crossLink}}. Note that the filters must be applied before caching.
+ *
+ * &lt;h4&gt;Example&lt;/h4&gt;
+ *      myInstance.filters = [
+ *          new createjs.ColorFilter(0, 0, 0, 1, 255, 0, 0),
+ *          new createjs.BlurFilter(5, 5, 10)
+ *      ];
+ *      myInstance.cache(0,0, 100, 100);
+ *
+ * Note that each filter can implement a {{#crossLink &quot;Filter/getBounds&quot;}}{{/crossLink}} method, which returns the
+ * margins that need to be applied in order to fully display the filter. For example, the {{#crossLink &quot;BlurFilter&quot;}}{{/crossLink}}
+ * will cause an object to feather outwards, resulting in a margin around the shape.
+ *
+ * &lt;h4&gt;EaselJS Filters&lt;/h4&gt;
+ * EaselJS comes with a number of pre-built filters. Note that individual filters are not compiled into the minified
+ * version of EaselJS. To use them, you must include them manually in the HTML.
+ * &lt;ul&gt;&lt;li&gt;{{#crossLink &quot;AlphaMapFilter&quot;}}{{/crossLink}} : Map a greyscale image to the alpha channel of a display object&lt;/li&gt;
+ *      &lt;li&gt;{{#crossLink &quot;AlphaMaskFilter&quot;}}{{/crossLink}}: Map an image&#x27;s alpha channel to the alpha channel of a display object&lt;/li&gt;
+ *      &lt;li&gt;{{#crossLink &quot;BlurFilter&quot;}}{{/crossLink}}: Apply vertical and horizontal blur to a display object&lt;/li&gt;
+ *      &lt;li&gt;{{#crossLink &quot;ColorFilter&quot;}}{{/crossLink}}: Color transform a display object&lt;/li&gt;
+ *      &lt;li&gt;{{#crossLink &quot;ColorMatrixFilter&quot;}}{{/crossLink}}: Transform an image using a {{#crossLink &quot;ColorMatrix&quot;}}{{/crossLink}}&lt;/li&gt;
+ * &lt;/ul&gt;
+ *
+ * @class Filter
+ * @constructor
+ **/
+var Filter = function() {
+  this.initialize();
+};
+var p = Filter.prototype;
+
+// constructor:
+	/**
+	 * Initialization method.
+	 * @method initialize
+	 * @protected
+	 **/
+	p.initialize = function() {}
+
+// public methods:
+	/**
+	 * Returns a rectangle with values indicating the margins required to draw the filter or null.
+	 * For example, a filter that will extend the drawing area 4 pixels to the left, and 7 pixels to the right
+	 * (but no pixels up or down) would return a rectangle with (x=-4, y=0, width=11, height=0).
+	 * @method getBounds
+	 * @return {Rectangle} a rectangle object indicating the margins required to draw the filter or null if the filter does not effect bounds.
+	 **/
+	p.getBounds = function() {
+		return null;
+	};
+
+	/**
+	 * Applies the filter to the specified context.
+	 * @method applyFilter
+	 * @param {CanvasRenderingContext2D} ctx The 2D context to use as the source.
+	 * @param {Number} x The x position to use for the source rect.
+	 * @param {Number} y The y position to use for the source rect.
+	 * @param {Number} width The width to use for the source rect.
+	 * @param {Number} height The height to use for the source rect.
+	 * @param {CanvasRenderingContext2D} [targetCtx] The 2D context to draw the result to. Defaults to the context passed to ctx.
+	 * @param {Number} [targetX] The x position to draw the result to. Defaults to the value passed to x.
+	 * @param {Number} [targetY] The y position to draw the result to. Defaults to the value passed to y.
+	 * @return {Boolean} If the filter was applied successfully.
+	 **/
+	p.applyFilter = function(ctx, x, y, width, height, targetCtx, targetX, targetY) {}
+
+	/**
+	 * Returns a string representation of this object.
+	 * @method toString
+	 * @return {String} a string representation of the instance.
+	 **/
+	p.toString = function() {
+		return &quot;[Filter]&quot;;
+	};
+
+	/**
+	 * Returns a clone of this Filter instance.
+	 * @method clone
+	 * @return {Filter} A clone of the current Filter instance.
+	 **/
+	p.clone = function() {
+		return new Filter();
+	};
+
+createjs.Filter = Filter;
+}());
+
+    </pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-ks-scroll-styles.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

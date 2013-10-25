@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ColorMatrix - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">&uarr; index</a></li>
+                <li><a href="#top" class="top-jump-link">&uarr; top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1>ColorMatrix Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends Array
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l39"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:39</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/EaselJS.html">EaselJS</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Provides helper functions for assembling a matrix for use with the <a href="../classes/ColorMatrixFilter.html" class="crosslink">ColorMatrixFilter</a>,
+or can be used directly as the matrix for a ColorMatrixFilter. Most methods return the instance to facilitate
+chained calls.</p>
+<p><h4>Example</h4>
+     myColorMatrix.adjustHue(20).adjustBrightness(50);</p>
+<p>See <a href="../classes/Filter.html" class="crosslink">Filter</a> for an example of how to apply filters, or <a href="../classes/ColorMatrixFilter.html" class="crosslink">ColorMatrixFilter</a>
+for an example of how to use ColorMatrix to change a DisplayObject&#39;s color.</p>
+
+</div>
+
+<!-- Class member index -->
+
+<a name="index" class="anchor-link"></a>
+<div class="index">
+<h2>Index</h2>
+
+    <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited">
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+
+
+    <div class="index-section properties">
+        <h3>Properties</h3>
+
+        <ul class="index-list properties extends">
+            
+                <li class="index-item property protected">
+                    <a href="#property_DELTA_INDEX">DELTA_INDEX</a>
+
+                    
+                        <span class="flag static">static</span>
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property_IDENTITY_MATRIX">IDENTITY_MATRIX</a>
+
+                    
+                        <span class="flag static">static</span>
+                    
+                </li>
+            
+                <li class="index-item property protected">
+                    <a href="#property_LENGTH">LENGTH</a>
+
+                    
+                        <span class="flag static">static</span>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+
+
+
+    <div class="index-section methods">
+        <h3>Methods</h3>
+
+        <ul class="index-list methods extends">
+
+            
+                <li class="index-item method constructor">
+                    <a href="#method_ColorMatrix">ColorMatrix</a>
+
+                    <span class="flag constructor">constructor</span>
+
+                    
+                    
+                </li>
+            
+
+            
+                <li class="index-item method protected">
+                    <a href="#method__cleanValue">_cleanValue</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected">
+                    <a href="#method__fixMatrix">_fixMatrix</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected">
+                    <a href="#method__multiplyMatrix">_multiplyMatrix</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_adjustBrightness">adjustBrightness</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_adjustColor">adjustColor</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_adjustContrast">adjustContrast</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_adjustHue">adjustHue</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_adjustSaturation">adjustSaturation</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_clone">clone</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_concat">concat</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_copyMatrix">copyMatrix</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method protected">
+                    <a href="#method_initialize">initialize</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_reset">reset</a>
+
+                    
+                    
+                </li>
+            
+                <li class="index-item method">
+                    <a href="#method_toArray">toArray</a>
+
+                    
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+
+
+</div>
+
+
+<div>
+
+
+    <div class="properties-detail">
+        <h2>Properties</h2>
+
+        
+            <div id="property_DELTA_INDEX" class="property item protected">
+    <h3 class="name"><code>DELTA_INDEX</code>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l62"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:62</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Array of delta values for contrast calculations.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_IDENTITY_MATRIX" class="property item protected">
+    <h3 class="name"><code>IDENTITY_MATRIX</code>
+    <span class="type">Array</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l83"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:83</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>Identity matrix values.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="property_LENGTH" class="property item protected">
+    <h3 class="name"><code>LENGTH</code>
+    <span class="type">Number</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l98"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:98</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+        <div class="description">
+            <p>The constant length of a color matrix.</p>
+
+        </div>
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_ColorMatrix" class="method item">
+    <h3 class="name"><code>ColorMatrix</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>brightness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>contrast</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>saturation</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>hue</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l39"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:39</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">brightness</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">contrast</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">saturation</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">hue</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+    </div>
+
+
+
+    <div class="methods-detail">
+        <h2>Methods</h2>
+
+        
+            <div id="method__cleanValue" class="method item protected">
+    <h3 class="name"><code>_cleanValue</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>limit</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l320"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:320</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Make sure values are within the specified range, hue has a limit of 180, brightness is 255, others are 100.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">value</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The raw number</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">limit</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>The maximum that the number can be. The minimum is the limit * -1.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method__fixMatrix" class="method item protected">
+    <h3 class="name"><code>_fixMatrix</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>matrix</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l332"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:332</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Makes sure matrixes are 5x5 (25 long).</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">matrix</code>
+                            <span class="type">Array</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method__multiplyMatrix" class="method item protected">
+    <h3 class="name"><code>_multiplyMatrix</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>matrix</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l298"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:298</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">matrix</code>
+                            <span class="type">Array</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_adjustBrightness" class="method item">
+    <h3 class="name"><code>adjustBrightness</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l150"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:150</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Adjusts the brightness of pixel color by adding the specified value to the red, green and blue channels.
+Positive values will make the image brighter, negative values will make it darker.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">value</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>A value between -255 &amp; 255 that will be added to the RGB channels.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_adjustColor" class="method item">
+    <h3 class="name"><code>adjustColor</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>brightness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>contrast</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>saturation</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>hue</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l132"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:132</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Shortcut method to adjust brightness, contrast, saturation and hue.
+Equivalent to calling adjustHue(hue), adjustContrast(contrast),
+adjustBrightness(brightness), adjustSaturation(saturation), in that order.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">brightness</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">contrast</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">saturation</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">hue</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_adjustContrast" class="method item">
+    <h3 class="name"><code>adjustContrast</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l170"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:170</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Adjusts the contrast of pixel color.
+Positive values will increase contrast, negative values will decrease contrast.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">value</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>A value between -100 &amp; 100.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_adjustHue" class="method item">
+    <h3 class="name"><code>adjustHue</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l227"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:227</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Adjusts the hue of the pixel color.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">value</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>A value between -180 &amp; 180.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_adjustSaturation" class="method item">
+    <h3 class="name"><code>adjustSaturation</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l202"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:202</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Adjusts the color saturation of the pixel.
+Positive values will increase saturation, negative values will decrease saturation (trend towards greyscale).</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">value</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>A value between -100 &amp; 100.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_clone" class="method item">
+    <h3 class="name"><code>clone</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l264"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:264</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Returns a clone of this ColorMatrix.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>A clone of this ColorMatrix.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_concat" class="method item">
+    <h3 class="name"><code>concat</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>matrix</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l251"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:251</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Concatenates (multiplies) the specified matrix with this one.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">matrix</code>
+                            <span class="type">Array</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An array or ColorMatrix instance.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_copyMatrix" class="method item">
+    <h3 class="name"><code>copyMatrix</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>matrix</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l282"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:282</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Copy the specified matrix&#39;s values to this matrix.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">matrix</code>
+                            <span class="type">Array</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                            <p>An array or ColorMatrix instance.</p>
+
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_initialize" class="method item protected">
+    <h3 class="name"><code>initialize</code>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>brightness</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>contrast</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>saturation</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>hue</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l108"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:108</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Initialization method.</p>
+
+        </div>
+
+        
+            <div class="params">
+                <h4>Parameters:</h4>
+
+                <ul class="params-list">
+                
+                    <li class="param">
+                        
+                            <code class="param-name">brightness</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">contrast</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">saturation</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                    <li class="param">
+                        
+                            <code class="param-name">hue</code>
+                            <span class="type">Number</span>
+                        
+
+                        
+
+                        <div class="param-description">
+                             
+                        </div>
+
+                        
+                    </li>
+                
+                </ul>
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_reset" class="method item">
+    <h3 class="name"><code>reset</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l123"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:123</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Resets the matrix to identity values.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type"><a href="../classes/ColorMatrix.html" class="crosslink">ColorMatrix</a></span>:
+                        
+                        <p>The ColorMatrix instance the method is called on (useful for chaining calls.)</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+            <div id="method_toArray" class="method item">
+    <h3 class="name"><code>toArray</code>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    </h3>
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/sample-src_easeljs_filters_ColorMatrix.js.html#l273"><code>sample-src&#x2F;easeljs&#x2F;filters&#x2F;ColorMatrix.js:273</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="extended-detail">
+
+        <div class="description">
+            <p>Return a length 25 (5x5) array instance containing this matrix&#39;s values.</p>
+
+        </div>
+
+        
+
+        
+            <div class="returns">
+                <h4>Returns:</h4>
+
+                <div class="returns-description">
+                    
+                        
+                            <span class="type">Array</span>:
+                        
+                        <p>An array holding this matrix&#39;s values.</p>
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </div>
+</div>
+
+        
+    </div>
+
+
+
+
+</div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-ks-scroll-styles.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

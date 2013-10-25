@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>sample-src/easeljs/display/Graphics.js - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">&uarr; index</a></li>
+                <li><a href="#top" class="top-jump-link">&uarr; top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1 class="file-heading">File: sample-src/easeljs/display/Graphics.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+* Graphics
+* Visit http://createjs.com/ for documentation, updates and examples.
+*
+* Copyright (c) 2010 gskinner.com, inc.
+*
+* Permission is hereby granted, free of charge, to any person
+* obtaining a copy of this software and associated documentation
+* files (the &quot;Software&quot;), to deal in the Software without
+* restriction, including without limitation the rights to use,
+* copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the
+* Software is furnished to do so, subject to the following
+* conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+* OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/**
+ * @module EaselJS
+ */
+
+// namespace:
+this.createjs = this.createjs||{};
+
+(function() {
+	&quot;use strict&quot;;
+
+/**
+* Inner class used by the {{#crossLink &quot;Graphics&quot;}}{{/crossLink}} class. Used to create the instruction lists used in Graphics:
+* @class Command
+* @protected
+* @constructor
+**/
+function Command(f, params, path) {
+	this.f = f;
+	this.params = params;
+	this.path = path==null ? true : path;
+}
+
+/**
+* @method exec
+* @protected
+* @param {Object} scope
+**/
+Command.prototype.exec = function(scope) { this.f.apply(scope, this.params); };
+
+/**
+ * The Graphics class exposes an easy to use API for generating vector drawing instructions and drawing them to a
+ * specified context. Note that you can use Graphics without any dependency on the Easel framework by calling {{#crossLink &quot;DisplayObject/draw&quot;}}{{/crossLink}}
+ * directly, or it can be used with the {{#crossLink &quot;Shape&quot;}}{{/crossLink}} object to draw vector graphics within the
+ * context of an Easel display list.
+ *
+ * &lt;h4&gt;Example&lt;/h4&gt;
+ *      var g = new createjs.Graphics();
+ *	    g.setStrokeStyle(1);
+ *	    g.beginStroke(createjs.Graphics.getRGB(0,0,0));
+ *	    g.beginFill(createjs.Graphics.getRGB(255,0,0));
+ *	    g.drawCircle(0,0,3);
+ *
+ *	    var s = new createjs.Shape(g);
+ *	    	s.x = 100;
+ *	    	s.y = 100;
+ *
+ *	    stage.addChild(s);
+ *	    stage.update();
+ *
+ * Note that all drawing methods in Graphics return the Graphics instance, so they can be chained together. For example,
+ * the following line of code would generate the instructions to draw a rectangle with a red stroke and blue fill, then
+ * render it to the specified context2D:
+ *
+ *      myGraphics.beginStroke(&quot;#F00&quot;).beginFill(&quot;#00F&quot;).drawRect(20, 20, 100, 50).draw(myContext2D);
+ *
+ * &lt;h4&gt;Tiny API&lt;/h4&gt;
+ * The Graphics class also includes a &quot;tiny API&quot;, which is one or two-letter methods that are shortcuts for all of the
+ * Graphics methods. These methods are great for creating compact instructions, and is used by the Toolkit for CreateJS
+ * to generate readable code. All tiny methods are marked as protected, so you can view them by enabling protected
+ * descriptions in the docs.
+ *
+ * &lt;table&gt;
+ *     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Tiny&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Method&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Tiny&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Method&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;mt&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/moveTo&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;lt&lt;/td&gt; &lt;td&gt;{{#crossLink &quot;Graphics/lineTo&quot;}}{{/crossLink}}&lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;a/at&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/arc&quot;}}{{/crossLink}} / {{#crossLink &quot;Graphics/arcTo&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;bt&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/bezierCurveTo&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;qt&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/quadraticCurveTo&quot;}}{{/crossLink}} (also curveTo)&lt;/td&gt;
+ *     &lt;td&gt;r&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/rect&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;cp&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/closePath&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;c&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/clear&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;f&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginFill&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;lf&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginLinearGradientFill&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;rf&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginRadialGradientFill&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;bf&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginBitmapFill&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;ef&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/endFill&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;ss&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/setStrokeStyle&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;s&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginStroke&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;ls&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginLinearGradientStroke&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;rs&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginRadialGradientStroke&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;bs&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/beginBitmapStroke&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;es&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/endStroke&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;dr&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawRect&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;rr&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawRoundRect&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;rc&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawRoundRectComplex&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;dc&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawCircle&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;de&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawEllipse&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ *     &lt;tr&gt;&lt;td&gt;dp&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/drawPolyStar&quot;}}{{/crossLink}} &lt;/td&gt;
+ *     &lt;td&gt;p&lt;/td&gt;&lt;td&gt;{{#crossLink &quot;Graphics/decodePath&quot;}}{{/crossLink}} &lt;/td&gt;&lt;/tr&gt;
+ * &lt;/table&gt;
+ *
+ * Here is the above example, using the tiny API instead.
+ *
+ *      myGraphics.s(&quot;#F00&quot;).f(&quot;#00F&quot;).r(20, 20, 100, 50).draw(myContext2D);
+ *
+ * @class Graphics
+ * @constructor
+ * @for Graphics
+ **/
+var Graphics = function() {
+	this.initialize();
+};
+var p = Graphics.prototype;
+
+// static public methods:
+
+
+	/**
+	 * Returns a CSS compatible color string based on the specified RGB numeric color values in the format
+	 * &quot;rgba(255,255,255,1.0)&quot;, or if alpha is null then in the format &quot;rgb(255,255,255)&quot;. For example,
+	 *
+	 *      createjs.Graphics.getRGB(50, 100, 150, 0.5);
+	 *      // Returns &quot;rgba(50,100,150,0.5)&quot;
+	 *
+	 * It also supports passing a single hex color value as the first param, and an optional alpha value as the second
+	 * param. For example,
+	 *
+	 *      createjs.Graphics.getRGB(0xFF00FF, 0.2);
+	 *      // Returns &quot;rgba(255,0,255,0.2)&quot;
+	 *
+	 * @method getRGB
+	 * @static
+	 * @param {Number} r The red component for the color, between 0 and 0xFF (255).
+	 * @param {Number} g The green component for the color, between 0 and 0xFF (255).
+	 * @param {Number} b The blue component for the color, between 0 and 0xFF (255).
+	 * @param {Number} [alpha] The alpha component for the color where 0 is fully transparent and 1 is fully opaque.
+	 * @return {String} A CSS compatible color string based on the specified RGB numeric color values in the format
+	 * &quot;rgba(255,255,255,1.0)&quot;, or if alpha is null then in the format &quot;rgb(255,255,255)&quot;.
+	 **/
+	Graphics.getRGB = function(r, g, b, alpha) {
+		if (r != null &amp;&amp; b == null) {
+			alpha = g;
+			b = r&amp;0xFF;
+			g = r&gt;&gt;8&amp;0xFF;
+			r = r&gt;&gt;16&amp;0xFF;
+		}
+		if (alpha == null) {
+			return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;
+		} else {
+			return &quot;rgba(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;,&quot;+alpha+&quot;)&quot;;
+		}
+	};
+
+	/**
+	 * Returns a CSS compatible color string based on the specified HSL numeric color values in the format &quot;hsla(360,100,100,1.0)&quot;,
+	 * or if alpha is null then in the format &quot;hsl(360,100,100)&quot;.
+	 *
+	 *      createjs.Graphics.getHSL(150, 100, 70);
+	 *      // Returns &quot;hsl(150,100,70)&quot;
+	 *
+	 * @method getHSL
+	 * @static
+	 * @param {Number} hue The hue component for the color, between 0 and 360.
+	 * @param {Number} saturation The saturation component for the color, between 0 and 100.
+	 * @param {Number} lightness The lightness component for the color, between 0 and 100.
+	 * @param {Number} [alpha] The alpha component for the color where 0 is fully transparent and 1 is fully opaque.
+	 * @return {String} A CSS compatible color string based on the specified HSL numeric color values in the format
+	 * &quot;hsla(360,100,100,1.0)&quot;, or if alpha is null then in the format &quot;hsl(360,100,100)&quot;.
+	 **/
+	Graphics.getHSL = function(hue, saturation, lightness, alpha) {
+		if (alpha == null) {
+			return &quot;hsl(&quot;+(hue%360)+&quot;,&quot;+saturation+&quot;%,&quot;+lightness+&quot;%)&quot;;
+		} else {
+			return &quot;hsla(&quot;+(hue%360)+&quot;,&quot;+saturation+&quot;%,&quot;+lightness+&quot;%,&quot;+alpha+&quot;)&quot;;
+		}
+	};
+
+// static properties:
+
+	/**
+	 * Exposes the Command class used internally by Graphics. Useful for extending the Graphics class or injecting
+	 * functionality.
+	 * @property Command
+	 * @static
+	 * @type {Function}
+	 **/
+	Graphics.Command = Command;
+
+	/**
+	 * Map of Base64 characters to values. Used by {{#crossLink &quot;Graphics/decodePath&quot;}}{{/crossLink}}.
+	 * @property BASE_64
+	 * @static
+	 * @final
+	 * @readonly
+	 * @type {Object}
+	 **/
+	Graphics.BASE_64 = {&quot;A&quot;:0,&quot;B&quot;:1,&quot;C&quot;:2,&quot;D&quot;:3,&quot;E&quot;:4,&quot;F&quot;:5,&quot;G&quot;:6,&quot;H&quot;:7,&quot;I&quot;:8,&quot;J&quot;:9,&quot;K&quot;:10,&quot;L&quot;:11,&quot;M&quot;:12,&quot;N&quot;:13,&quot;O&quot;:14,&quot;P&quot;:15,&quot;Q&quot;:16,&quot;R&quot;:17,&quot;S&quot;:18,&quot;T&quot;:19,&quot;U&quot;:20,&quot;V&quot;:21,&quot;W&quot;:22,&quot;X&quot;:23,&quot;Y&quot;:24,&quot;Z&quot;:25,&quot;a&quot;:26,&quot;b&quot;:27,&quot;c&quot;:28,&quot;d&quot;:29,&quot;e&quot;:30,&quot;f&quot;:31,&quot;g&quot;:32,&quot;h&quot;:33,&quot;i&quot;:34,&quot;j&quot;:35,&quot;k&quot;:36,&quot;l&quot;:37,&quot;m&quot;:38,&quot;n&quot;:39,&quot;o&quot;:40,&quot;p&quot;:41,&quot;q&quot;:42,&quot;r&quot;:43,&quot;s&quot;:44,&quot;t&quot;:45,&quot;u&quot;:46,&quot;v&quot;:47,&quot;w&quot;:48,&quot;x&quot;:49,&quot;y&quot;:50,&quot;z&quot;:51,&quot;0&quot;:52,&quot;1&quot;:53,&quot;2&quot;:54,&quot;3&quot;:55,&quot;4&quot;:56,&quot;5&quot;:57,&quot;6&quot;:58,&quot;7&quot;:59,&quot;8&quot;:60,&quot;9&quot;:61,&quot;+&quot;:62,&quot;/&quot;:63};
+
+
+	/**
+	 * Maps numeric values for the caps parameter of {{#crossLink &quot;Graphics/setStrokeStyle&quot;}}{{/crossLink}} to
+	 * corresponding string values. This is primarily for use with the tiny API. The mappings are as follows: 0 to
+	 * &quot;butt&quot;, 1 to &quot;round&quot;, and 2 to &quot;square&quot;.
+	 * For example, to set the line caps to &quot;square&quot;:
+	 *
+	 *      myGraphics.ss(16, 2);
+	 *
+	 * @property STROKE_CAPS_MAP
+	 * @static
+	 * @final
+	 * @readonly
+	 * @type {Array}
+	 **/
+	Graphics.STROKE_CAPS_MAP = [&quot;butt&quot;, &quot;round&quot;, &quot;square&quot;];
+
+	/**
+	 * Maps numeric values for the joints parameter of {{#crossLink &quot;Graphics/setStrokeStyle&quot;}}{{/crossLink}} to
+	 * corresponding string values. This is primarily for use with the tiny API. The mappings are as follows: 0 to
+	 * &quot;miter&quot;, 1 to &quot;round&quot;, and 2 to &quot;bevel&quot;.
+	 * For example, to set the line joints to &quot;bevel&quot;:
+	 *
+	 *      myGraphics.ss(16, 0, 2);
+	 *
+	 * @property STROKE_JOINTS_MAP
+	 * @static
+	 * @final
+	 * @readonly
+	 * @type {Array}
+	 **/
+	Graphics.STROKE_JOINTS_MAP = [&quot;miter&quot;, &quot;round&quot;, &quot;bevel&quot;];
+
+	/**
+	 * @property _ctx
+	 * @static
+	 * @protected
+	 * @type {CanvasRenderingContext2D}
+	 **/
+	 
+	/**
+	 * @property beginCmd
+	 * @static
+	 * @protected
+	 * @type {Command}
+	 **/
+	 
+	/**
+	 * @property fillCmd
+	 * @static
+	 * @protected
+	 * @type {Command}
+	 **/
+	 
+	/**
+	 * @property strokeCmd
+	 * @static
+	 * @protected
+	 * @type {Command}
+	 **/
+	var canvas = (createjs.createCanvas?createjs.createCanvas():document.createElement(&quot;canvas&quot;));
+	if (canvas.getContext) {
+		var ctx = Graphics._ctx = canvas.getContext(&quot;2d&quot;);
+		Graphics.beginCmd = new Command(ctx.beginPath, [], false);
+		Graphics.fillCmd = new Command(ctx.fill, [], false);
+		Graphics.strokeCmd = new Command(ctx.stroke, [], false);
+		canvas.width = canvas.height = 1;
+	}
+	
+// public properties
+
+// private properties
+	/**
+	 * @property _strokeInstructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._strokeInstructions = null;
+
+	/**
+	 * @property _strokeStyleInstructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._strokeStyleInstructions = null;
+
+	/**
+	 * @property _strokeIgnoreScale
+	 * @protected
+	 * @type Boolean
+	 **/
+	p._strokeIgnoreScale = false;
+
+	/**
+	 * @property _fillInstructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._fillInstructions = null;
+
+	/**
+	 * @property _strokeMatrix
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._fillMatrix = null;
+
+	/**
+	 * @property _instructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._instructions = null;
+
+	/**
+	 * @property _oldInstructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._oldInstructions = null;
+
+	/**
+	 * @property _activeInstructions
+	 * @protected
+	 * @type {Array}
+	 **/
+	p._activeInstructions = null;
+
+	/**
+	 * @property _active
+	 * @protected
+	 * @type {Boolean}
+	 * @default false
+	 **/
+	p._active = false;
+
+	/**
+	 * @property _dirty
+	 * @protected
+	 * @type {Boolean}
+	 * @default false
+	 **/
+	p._dirty = false;
+
+	/**
+	 * Initialization method.
+	 * @method initialize
+	 * @protected
+	 **/
+	p.initialize = function() {
+		this.clear();
+		this._ctx = Graphics._ctx;
+	};
+
+	/**
+	 * Returns true if this Graphics instance has no drawing commands.
+	 * @method isEmpty
+	 * @return {Boolean} Returns true if this Graphics instance has no drawing commands.
+	 **/
+	p.isEmpty = function() {
+		return !(this._instructions.length || this._oldInstructions.length || this._activeInstructions.length);
+	};
+
+	/**
+	 * Draws the display object into the specified context ignoring its visible, alpha, shadow, and transform.
+	 * Returns true if the draw was handled (useful for overriding functionality).
+	 *
+	 * NOTE: This method is mainly for internal use, though it may be useful for advanced uses.
+	 * @method draw
+	 * @param {CanvasRenderingContext2D} ctx The canvas 2D context object to draw into.
+	 **/
+	p.draw = function(ctx) {
+		if (this._dirty) { this._updateInstructions(); }
+		var instr = this._instructions;
+		for (var i=0, l=instr.length; i&lt;l; i++) {
+			instr[i].exec(ctx);
+		}
+	};
+
+	/**
+	 * Draws only the path described for this Graphics instance, skipping any non-path instructions, including fill and
+	 * stroke descriptions. Used by &lt;code&gt;DisplayObject.clippingPath&lt;/code&gt; to draw the clipping path, for example.
+	 * @method drawAsPath
+	 * @param {CanvasRenderingContext2D} ctx The canvas 2D context object to draw into.
+	 **/
+	p.drawAsPath = function(ctx) {
+		if (this._dirty) { this._updateInstructions(); }
+		var instr, instrs = this._instructions;
+		for (var i=0, l=instrs.length; i&lt;l; i++) {
+			// the first command is always a beginPath command.
+			if ((instr = instrs[i]).path || i==0) { instr.exec(ctx); }
+		}
+	};
+
+// public methods that map directly to context 2D calls:
+	/**
+	 * Moves the drawing point to the specified position. A tiny API method &quot;mt&quot; also exists.
+	 * @method moveTo
+	 * @param {Number} x The x coordinate the drawing point should move to.
+	 * @param {Number} y The y coordinate the drawing point should move to.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls).
+	 **/
+	p.moveTo = function(x, y) {
+		this._activeInstructions.push(new Command(this._ctx.moveTo, [x, y]));
+		return this;
+	};
+
+	/**
+	 * Draws a line from the current drawing point to the specified position, which become the new current drawing
+	 * point. A tiny API method &quot;lt&quot; also exists.
+	 *
+	 * For detailed information, read the
+	 * &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#complex-shapes-(paths)&quot;&gt;
+	 * whatwg spec&lt;/a&gt;.
+	 * @method lineTo
+	 * @param {Number} x The x coordinate the drawing point should draw to.
+	 * @param {Number} y The y coordinate the drawing point should draw to.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.lineTo = function(x, y) {
+		this._dirty = this._active = true;
+		this._activeInstructions.push(new Command(this._ctx.lineTo, [x, y]));
+		return this;
+	};
+
+	/**
+	 * Draws an arc with the specified control points and radius.  For detailed information, read the
+	 * &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-arcto&quot;&gt;
+	 * whatwg spec&lt;/a&gt;. A tiny API method &quot;at&quot; also exists.
+	 * @method arcTo
+	 * @param {Number} x1
+	 * @param {Number} y1
+	 * @param {Number} x2
+	 * @param {Number} y2
+	 * @param {Number} radius
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.arcTo = function(x1, y1, x2, y2, radius) {
+		this._dirty = this._active = true;
+		this._activeInstructions.push(new Command(this._ctx.arcTo, [x1, y1, x2, y2, radius]));
+		return this;
+	};
+
+	/**
+	 * Draws an arc defined by the radius, startAngle and endAngle arguments, centered at the position (x, y). For
+	 * example, to draw a full circle with a radius of 20 centered at (100, 100):
+	 *
+	 *      arc(100, 100, 20, 0, Math.PI*2);
+	 *
+	 * For detailed information, read the
+	 * &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-arc&quot;&gt;whatwg spec&lt;/a&gt;.
+	 * A tiny API method &quot;a&quot; also exists.
+	 * @method arc
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @param {Number} radius
+	 * @param {Number} startAngle Measured in radians.
+	 * @param {Number} endAngle Measured in radians.
+	 * @param {Boolean} anticlockwise
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.arc = function(x, y, radius, startAngle, endAngle, anticlockwise) {
+		this._dirty = this._active = true;
+		if (anticlockwise == null) { anticlockwise = false; }
+		this._activeInstructions.push(new Command(this._ctx.arc, [x, y, radius, startAngle, endAngle, anticlockwise]));
+		return this;
+	};
+
+	/**
+	 * Draws a quadratic curve from the current drawing point to (x, y) using the control point (cpx, cpy). For detailed
+	 * information, read the &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-quadraticcurveto&quot;&gt;
+	 * whatwg spec&lt;/a&gt;. A tiny API method &quot;qt&quot; also exists.
+	 * @method quadraticCurveTo
+	 * @param {Number} cpx
+	 * @param {Number} cpy
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.quadraticCurveTo = function(cpx, cpy, x, y) {
+		this._dirty = this._active = true;
+		this._activeInstructions.push(new Command(this._ctx.quadraticCurveTo, [cpx, cpy, x, y]));
+		return this;
+	};
+
+	/**
+	 * Draws a bezier curve from the current drawing point to (x, y) using the control points (cp1x, cp1y) and (cp2x,
+	 * cp2y). For detailed information, read the
+	 * &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-beziercurveto&quot;&gt;
+	 * whatwg spec&lt;/a&gt;. A tiny API method &quot;bt&quot; also exists.
+	 * @method bezierCurveTo
+	 * @param {Number} cp1x
+	 * @param {Number} cp1y
+	 * @param {Number} cp2x
+	 * @param {Number} cp2y
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.bezierCurveTo = function(cp1x, cp1y, cp2x, cp2y, x, y) {
+		this._dirty = this._active = true;
+		this._activeInstructions.push(new Command(this._ctx.bezierCurveTo, [cp1x, cp1y, cp2x, cp2y, x, y]));
+		return this;
+	};
+
+	/**
+	 * Draws a rectangle at (x, y) with the specified width and height using the current fill and/or stroke.
+	 * For detailed information, read the
+	 * &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#dom-context-2d-rect&quot;&gt;
+	 * whatwg spec&lt;/a&gt;. A tiny API method &quot;r&quot; also exists.
+	 * @method rect
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @param {Number} w Width of the rectangle
+	 * @param {Number} h Height of the rectangle
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.rect = function(x, y, w, h) {
+		this._dirty = this._active = true;
+		this._activeInstructions.push(new Command(this._ctx.rect, [x, y, w, h]));
+		return this;
+	};
+
+	/**
+	 * Closes the current path, effectively drawing a line from the current drawing point to the first drawing point specified
+	 * since the fill or stroke was last set. A tiny API method &quot;cp&quot; also exists.
+	 * @method closePath
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.closePath = function() {
+		if (this._active) {
+			this._dirty = true;
+			this._activeInstructions.push(new Command(this._ctx.closePath, []));
+		}
+		return this;
+	};
+
+
+// public methods that roughly map to Flash graphics APIs:
+	/**
+	 * Clears all drawing instructions, effectively resetting this Graphics instance. Any line and fill styles will need
+	 * to be redefined to draw shapes following a clear call. A tiny API method &quot;c&quot; also exists.
+	 * @method clear
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.clear = function() {
+		this._instructions = [];
+		this._oldInstructions = [];
+		this._activeInstructions = [];
+		this._strokeStyleInstructions = this._strokeInstructions = this._fillInstructions = this._fillMatrix = null;
+		this._active = this._dirty = this._strokeIgnoreScale = false;
+		return this;
+	};
+
+	/**
+	 * Begins a fill with the specified color. This ends the current sub-path. A tiny API method &quot;f&quot; also exists.
+	 * @method beginFill
+	 * @param {String} color A CSS compatible color value (ex. &quot;red&quot;, &quot;#FF0000&quot;, or &quot;rgba(255,0,0,0.5)&quot;). Setting to
+	 * null will result in no fill.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginFill = function(color) {
+		if (this._active) { this._newPath(); }
+		this._fillInstructions = color ? [new Command(this._setProp, [&quot;fillStyle&quot;, color], false)] : null;
+		this._fillMatrix = null;
+		return this;
+	};
+
+	/**
+	 * Begins a linear gradient fill defined by the line (x0, y0) to (x1, y1). This ends the current sub-path. For
+	 * example, the following code defines a black to white vertical gradient ranging from 20px to 120px, and draws a
+	 * square to display it:
+	 *
+	 *      myGraphics.beginLinearGradientFill([&quot;#000&quot;,&quot;#FFF&quot;], [0, 1], 0, 20, 0, 120).drawRect(20, 20, 120, 120);
+	 *
+	 * A tiny API method &quot;lf&quot; also exists.
+	 * @method beginLinearGradientFill
+	 * @param {Array} colors An array of CSS compatible color values. For example, [&quot;#F00&quot;,&quot;#00F&quot;] would define a gradient
+	 * drawing from red to blue.
+	 * @param {Array} ratios An array of gradient positions which correspond to the colors. For example, [0.1, 0.9] would draw
+	 * the first color to 10% then interpolating to the second color at 90%.
+	 * @param {Number} x0 The position of the first point defining the line that defines the gradient direction and size.
+	 * @param {Number} y0 The position of the first point defining the line that defines the gradient direction and size.
+	 * @param {Number} x1 The position of the second point defining the line that defines the gradient direction and size.
+	 * @param {Number} y1 The position of the second point defining the line that defines the gradient direction and size.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginLinearGradientFill = function(colors, ratios, x0, y0, x1, y1) {
+		if (this._active) { this._newPath(); }
+		var o = this._ctx.createLinearGradient(x0, y0, x1, y1);
+		for (var i=0, l=colors.length; i&lt;l; i++) {
+			o.addColorStop(ratios[i], colors[i]);
+		}
+		this._fillInstructions = [new Command(this._setProp, [&quot;fillStyle&quot;, o], false)];
+		this._fillMatrix = null;
+		return this;
+	};
+
+	/**
+	 * Begins a radial gradient fill. This ends the current sub-path. For example, the following code defines a red to
+	 * blue radial gradient centered at (100, 100), with a radius of 50, and draws a circle to display it:
+	 *
+	 *      myGraphics.beginRadialGradientFill([&quot;#F00&quot;,&quot;#00F&quot;], [0, 1], 100, 100, 0, 100, 100, 50).drawCircle(100, 100, 50);
+	 *
+	 * A tiny API method &quot;rf&quot; also exists.
+	 * @method beginRadialGradientFill
+	 * @param {Array} colors An array of CSS compatible color values. For example, [&quot;#F00&quot;,&quot;#00F&quot;] would define
+	 * a gradient drawing from red to blue.
+	 * @param {Array} ratios An array of gradient positions which correspond to the colors. For example, [0.1,
+	 * 0.9] would draw the first color to 10% then interpolating to the second color at 90%.
+	 * @param {Number} x0 Center position of the inner circle that defines the gradient.
+	 * @param {Number} y0 Center position of the inner circle that defines the gradient.
+	 * @param {Number} r0 Radius of the inner circle that defines the gradient.
+	 * @param {Number} x1 Center position of the outer circle that defines the gradient.
+	 * @param {Number} y1 Center position of the outer circle that defines the gradient.
+	 * @param {Number} r1 Radius of the outer circle that defines the gradient.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginRadialGradientFill = function(colors, ratios, x0, y0, r0, x1, y1, r1) {
+		if (this._active) { this._newPath(); }
+		var o = this._ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+		for (var i=0, l=colors.length; i&lt;l; i++) {
+			o.addColorStop(ratios[i], colors[i]);
+		}
+		this._fillInstructions = [new Command(this._setProp, [&quot;fillStyle&quot;, o], false)];
+		this._fillMatrix = null;
+		return this;
+	};
+
+	/**
+	 * Begins a pattern fill using the specified image. This ends the current sub-path. A tiny API method &quot;bf&quot; also
+	 * exists.
+	 * @method beginBitmapFill
+	 * @param {HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} image The Image, Canvas, or Video object to use
+	 * as the pattern.
+	 * @param {String} repetition Optional. Indicates whether to repeat the image in the fill area. One of &quot;repeat&quot;,
+	 * &quot;repeat-x&quot;, &quot;repeat-y&quot;, or &quot;no-repeat&quot;. Defaults to &quot;repeat&quot;. Note that Firefox does not support &quot;repeat-x&quot; or
+	 * &quot;repeat-y&quot; (latest tests were in FF 20.0), and will default to &quot;repeat&quot;.
+	 * @param {Matrix2D} matrix Optional. Specifies a transformation matrix for the bitmap fill. This transformation
+	 * will be applied relative to the parent transform.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginBitmapFill = function(image, repetition, matrix) {
+		if (this._active) { this._newPath(); }
+		repetition = repetition || &quot;&quot;;
+		var o = this._ctx.createPattern(image, repetition);
+		this._fillInstructions = [new Command(this._setProp, [&quot;fillStyle&quot;, o], false)];
+		this._fillMatrix = matrix ? [matrix.a, matrix.b, matrix.c, matrix.d, matrix.tx, matrix.ty] : null;
+		return this;
+	};
+
+	/**
+	 * Ends the current sub-path, and begins a new one with no fill. Functionally identical to &lt;code&gt;beginFill(null)&lt;/code&gt;.
+	 * A tiny API method &quot;ef&quot; also exists.
+	 * @method endFill
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.endFill = function() {
+		return this.beginFill();
+	};
+
+	/**
+	 * Sets the stroke style for the current sub-path. Like all drawing methods, this can be chained, so you can define
+	 * the stroke style and color in a single line of code like so:
+	 *
+	 *      myGraphics.setStrokeStyle(8,&quot;round&quot;).beginStroke(&quot;#F00&quot;);
+	 *
+	 * A tiny API method &quot;ss&quot; also exists.
+	 * @method setStrokeStyle
+	 * @param {Number} thickness The width of the stroke.
+	 * @param {String | Number} [caps=0] Indicates the type of caps to use at the end of lines. One of butt,
+	 * round, or square. Defaults to &quot;butt&quot;. Also accepts the values 0 (butt), 1 (round), and 2 (square) for use with
+	 * the tiny API.
+	 * @param {String | Number} [joints=0] Specifies the type of joints that should be used where two lines meet.
+	 * One of bevel, round, or miter. Defaults to &quot;miter&quot;. Also accepts the values 0 (miter), 1 (round), and 2 (bevel)
+	 * for use with the tiny API.
+	 * @param {Number} [miterLimit=10] If joints is set to &quot;miter&quot;, then you can specify a miter limit ratio which
+	 * controls at what point a mitered joint will be clipped.
+	 * @param {Boolean} [ignoreScale=false] If true, the stroke will be drawn at the specified thickness regardless
+	 * of active transformations.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.setStrokeStyle = function(thickness, caps, joints, miterLimit, ignoreScale) {
+		if (this._active) { this._newPath(); }
+		this._strokeStyleInstructions = [
+			new Command(this._setProp, [&quot;lineWidth&quot;, (thickness == null ? &quot;1&quot; : thickness)], false),
+			new Command(this._setProp, [&quot;lineCap&quot;, (caps == null ? &quot;butt&quot; : (isNaN(caps) ? caps : Graphics.STROKE_CAPS_MAP[caps]))], false),
+			new Command(this._setProp, [&quot;lineJoin&quot;, (joints == null ? &quot;miter&quot; : (isNaN(joints) ? joints : Graphics.STROKE_JOINTS_MAP[joints]))], false),
+			new Command(this._setProp, [&quot;miterLimit&quot;, (miterLimit == null ? &quot;10&quot; : miterLimit)], false)
+			];
+		this._strokeIgnoreScale = ignoreScale;
+		return this;
+	};
+
+	/**
+	 * Begins a stroke with the specified color. This ends the current sub-path. A tiny API method &quot;s&quot; also exists.
+	 * @method beginStroke
+	 * @param {String} color A CSS compatible color value (ex. &quot;#FF0000&quot;, &quot;red&quot;, or &quot;rgba(255,0,0,0.5)&quot;). Setting to
+	 * null will result in no stroke.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginStroke = function(color) {
+		if (this._active) { this._newPath(); }
+		this._strokeInstructions = color ? [new Command(this._setProp, [&quot;strokeStyle&quot;, color], false)] : null;
+		return this;
+	};
+
+	/**
+	 * Begins a linear gradient stroke defined by the line (x0, y0) to (x1, y1). This ends the current sub-path. For
+	 * example, the following code defines a black to white vertical gradient ranging from 20px to 120px, and draws a
+	 * square to display it:
+	 *
+	 *      myGraphics.setStrokeStyle(10).
+	 *          beginLinearGradientStroke([&quot;#000&quot;,&quot;#FFF&quot;], [0, 1], 0, 20, 0, 120).drawRect(20, 20, 120, 120);
+	 *
+	 * A tiny API method &quot;ls&quot; also exists.
+	 * @method beginLinearGradientStroke
+	 * @param {Array} colors An array of CSS compatible color values. For example, [&quot;#F00&quot;,&quot;#00F&quot;] would define
+	 * a gradient drawing from red to blue.
+	 * @param {Array} ratios An array of gradient positions which correspond to the colors. For example, [0.1,
+	 * 0.9] would draw the first color to 10% then interpolating to the second color at 90%.
+	 * @param {Number} x0 The position of the first point defining the line that defines the gradient direction and size.
+	 * @param {Number} y0 The position of the first point defining the line that defines the gradient direction and size.
+	 * @param {Number} x1 The position of the second point defining the line that defines the gradient direction and size.
+	 * @param {Number} y1 The position of the second point defining the line that defines the gradient direction and size.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginLinearGradientStroke = function(colors, ratios, x0, y0, x1, y1) {
+		if (this._active) { this._newPath(); }
+		var o = this._ctx.createLinearGradient(x0, y0, x1, y1);
+		for (var i=0, l=colors.length; i&lt;l; i++) {
+			o.addColorStop(ratios[i], colors[i]);
+		}
+		this._strokeInstructions = [new Command(this._setProp, [&quot;strokeStyle&quot;, o], false)];
+		return this;
+	};
+
+
+	/**
+	 * Begins a radial gradient stroke. This ends the current sub-path. For example, the following code defines a red to
+	 * blue radial gradient centered at (100, 100), with a radius of 50, and draws a rectangle to display it:
+	 *
+	 *      myGraphics.setStrokeStyle(10)
+	 *          .beginRadialGradientStroke([&quot;#F00&quot;,&quot;#00F&quot;], [0, 1], 100, 100, 0, 100, 100, 50)
+	 *          .drawRect(50, 90, 150, 110);
+	 *
+	 * A tiny API method &quot;rs&quot; also exists.
+	 * @method beginRadialGradientStroke
+	 * @param {Array} colors An array of CSS compatible color values. For example, [&quot;#F00&quot;,&quot;#00F&quot;] would define
+	 * a gradient drawing from red to blue.
+	 * @param {Array} ratios An array of gradient positions which correspond to the colors. For example, [0.1,
+	 * 0.9] would draw the first color to 10% then interpolating to the second color at 90%, then draw the second color
+	 * to 100%.
+	 * @param {Number} x0 Center position of the inner circle that defines the gradient.
+	 * @param {Number} y0 Center position of the inner circle that defines the gradient.
+	 * @param {Number} r0 Radius of the inner circle that defines the gradient.
+	 * @param {Number} x1 Center position of the outer circle that defines the gradient.
+	 * @param {Number} y1 Center position of the outer circle that defines the gradient.
+	 * @param {Number} r1 Radius of the outer circle that defines the gradient.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginRadialGradientStroke = function(colors, ratios, x0, y0, r0, x1, y1, r1) {
+		if (this._active) { this._newPath(); }
+		var o = this._ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+		for (var i=0, l=colors.length; i&lt;l; i++) {
+			o.addColorStop(ratios[i], colors[i]);
+		}
+		this._strokeInstructions = [new Command(this._setProp, [&quot;strokeStyle&quot;, o], false)];
+		return this;
+	};
+
+	/**
+	 * Begins a pattern fill using the specified image. This ends the current sub-path. Note that unlike bitmap fills,
+	 * strokes do not currently support a matrix parameter due to limitations in the canvas API. A tiny API method &quot;bs&quot;
+	 * also exists.
+	 * @method beginBitmapStroke
+	 * @param {HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} image The Image, Canvas, or Video object to use
+	 * as the pattern.
+	 * @param {String} [repetition=repeat] Optional. Indicates whether to repeat the image in the fill area. One of
+	 * &quot;repeat&quot;, &quot;repeat-x&quot;, &quot;repeat-y&quot;, or &quot;no-repeat&quot;. Defaults to &quot;repeat&quot;.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.beginBitmapStroke = function(image, repetition) {
+		// NOTE: matrix is not supported for stroke because transforms on strokes also affect the drawn stroke width.
+		if (this._active) { this._newPath(); }
+		repetition = repetition || &quot;&quot;;
+		var o = this._ctx.createPattern(image, repetition);
+		this._strokeInstructions = [new Command(this._setProp, [&quot;strokeStyle&quot;, o], false)];
+		return this;
+	};
+
+	/**
+	 * Ends the current sub-path, and begins a new one with no stroke. Functionally identical to &lt;code&gt;beginStroke(null)&lt;/code&gt;.
+	 * A tiny API method &quot;es&quot; also exists.
+	 * @method endStroke
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.endStroke = function() {
+		this.beginStroke();
+		return this;
+	};
+
+	/**
+	 * Maps the familiar ActionScript &lt;code&gt;curveTo()&lt;/code&gt; method to the functionally similar {{#crossLink &quot;Graphics/quadraticCurveTo&quot;}}{{/crossLink}}
+	 * method.
+	 * @method curveTo
+	 * @type {Function}
+	 **/
+	p.curveTo = p.quadraticCurveTo;
+
+	/**
+	 * Maps the familiar ActionScript &lt;code&gt;drawRect()&lt;/code&gt; method to the functionally similar {{#crossLink &quot;Graphics/rect&quot;}}{{/crossLink}}
+	 * method.
+	 * @method drawRect
+	 * @type {Function}
+	 **/
+	p.drawRect = p.rect;
+
+	/**
+	 * Draws a rounded rectangle with all corners with the specified radius.
+	 * @method drawRoundRect
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @param {Number} w
+	 * @param {Number} h
+	 * @param {Number} radius Corner radius.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.drawRoundRect = function(x, y, w, h, radius) {
+		this.drawRoundRectComplex(x, y, w, h, radius, radius, radius, radius);
+		return this;
+	};
+
+	/**
+	 * Draws a rounded rectangle with different corner radii. Supports positive and negative corner radii. A tiny API
+	 * method &quot;rc&quot; also exists.
+	 * @method drawRoundRectComplex
+	 * @param {Number} x The horizontal coordinate to draw the round rect.
+	 * @param {Number} y The vertical coordinate to draw the round rect.
+	 * @param {Number} w The width of the round rect.
+	 * @param {Number} h The height of the round rect.
+	 * @param {Number} radiusTL Top left corner radius.
+	 * @param {Number} radiusTR Top right corner radius.
+	 * @param {Number} radiusBR Bottom right corner radius.
+	 * @param {Number} radiusBL Bottom left corner radius.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.drawRoundRectComplex = function(x, y, w, h, radiusTL, radiusTR, radiusBR, radiusBL) {
+		var max = (w&lt;h?w:h)/2;
+		var mTL=0, mTR=0, mBR=0, mBL=0;
+		if (radiusTL &lt; 0) { radiusTL *= (mTL=-1); }
+		if (radiusTL &gt; max) { radiusTL = max; }
+		if (radiusTR &lt; 0) { radiusTR *= (mTR=-1); }
+		if (radiusTR &gt; max) { radiusTR = max; }
+		if (radiusBR &lt; 0) { radiusBR *= (mBR=-1); }
+		if (radiusBR &gt; max) { radiusBR = max; }
+		if (radiusBL &lt; 0) { radiusBL *= (mBL=-1); }
+		if (radiusBL &gt; max) { radiusBL = max; }
+
+		this._dirty = this._active = true;
+		var arcTo=this._ctx.arcTo, lineTo=this._ctx.lineTo;
+		this._activeInstructions.push(
+			new Command(this._ctx.moveTo, [x+w-radiusTR, y]),
+			new Command(arcTo, [x+w+radiusTR*mTR, y-radiusTR*mTR, x+w, y+radiusTR, radiusTR]),
+			new Command(lineTo, [x+w, y+h-radiusBR]),
+			new Command(arcTo, [x+w+radiusBR*mBR, y+h+radiusBR*mBR, x+w-radiusBR, y+h, radiusBR]),
+			new Command(lineTo, [x+radiusBL, y+h]),
+			new Command(arcTo, [x-radiusBL*mBL, y+h+radiusBL*mBL, x, y+h-radiusBL, radiusBL]),
+			new Command(lineTo, [x, y+radiusTL]),
+			new Command(arcTo, [x-radiusTL*mTL, y-radiusTL*mTL, x+radiusTL, y, radiusTL]),
+			new Command(this._ctx.closePath)
+		);
+		return this;
+	};
+
+	/**
+	 * Draws a circle with the specified radius at (x, y).
+	 *
+	 *      var g = new createjs.Graphics();
+	 *	    g.setStrokeStyle(1);
+	 *	    g.beginStroke(createjs.Graphics.getRGB(0,0,0));
+	 *	    g.beginFill(createjs.Graphics.getRGB(255,0,0));
+	 *	    g.drawCircle(0,0,3);
+	 *
+	 *	    var s = new createjs.Shape(g);
+	 *		s.x = 100;
+	 *		s.y = 100;
+	 *
+	 *	    stage.addChild(s);
+	 *	    stage.update();
+	 *
+	 * A tiny API method &quot;dc&quot; also exists.
+	 * @method drawCircle
+	 * @param {Number} x x coordinate center point of circle.
+	 * @param {Number} y y coordinate center point of circle.
+	 * @param {Number} radius Radius of circle.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.drawCircle = function(x, y, radius) {
+		this.arc(x, y, radius, 0, Math.PI*2);
+		return this;
+	};
+
+	/**
+	 * Draws an ellipse (oval) with a specified width (w) and height (h). Similar to {{#crossLink &quot;Graphics/drawCircle&quot;}}{{/crossLink}},
+	 * except the width and height can be different. A tiny API method &quot;de&quot; also exists.
+	 * @method drawEllipse
+	 * @param {Number} x x coordinate center point of ellipse.
+	 * @param {Number} y y coordinate center point of ellipse.
+	 * @param {Number} w height (horizontal diameter) of ellipse. The horizontal radius will be half of this number.
+	 * @param {Number} h width (vertical diameter) of ellipse. The vertical radius will be half of this number.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.drawEllipse = function(x, y, w, h) {
+		this._dirty = this._active = true;
+		var k = 0.5522848;
+		var ox = (w / 2) * k;
+		var oy = (h / 2) * k;
+		var xe = x + w;
+		var ye = y + h;
+		var xm = x + w / 2;
+		var ym = y + h / 2;
+
+		this._activeInstructions.push(
+			new Command(this._ctx.moveTo, [x, ym]),
+			new Command(this._ctx.bezierCurveTo, [x, ym-oy, xm-ox, y, xm, y]),
+			new Command(this._ctx.bezierCurveTo, [xm+ox, y, xe, ym-oy, xe, ym]),
+			new Command(this._ctx.bezierCurveTo, [xe, ym+oy, xm+ox, ye, xm, ye]),
+			new Command(this._ctx.bezierCurveTo, [xm-ox, ye, x, ym+oy, x, ym])
+		);
+		return this;
+	};
+
+	/**
+	 * Provides a method for injecting arbitrary Context2D (aka Canvas) API calls into a Graphics queue. The specified
+	 * callback function will be called in sequence with other drawing instructions. The callback will be executed in the
+	 * scope of the target canvas&#x27;s Context2D object, and will be passed the data object as a parameter.
+	 *
+	 * This is an advanced feature. It can allow for powerful functionality, like injecting output from tools that
+	 * export Context2D instructions, executing raw canvas calls within the context of the display list, or dynamically
+	 * modifying colors or stroke styles within a Graphics instance over time, but it is not intended for general use.
+	 *
+	 * Within a Graphics queue, each path begins by applying the fill and stroke styles and settings, followed by
+	 * drawing instructions, followed by the fill() and/or stroke() commands. This means that within a path, inject() can
+	 * update the fill &amp; stroke styles, but for it to be applied in a predictable manner, you must have begun a fill or
+	 * stroke (as appropriate) normally via the Graphics API. For example:
+	 *
+	 * 	function setColor(color) {
+	 * 		this.fillStyle = color;
+	 * 	}
+	 *
+	 * 	// this will not draw anything - no fill was begun, so fill() is not called:
+	 * 	myGraphics.inject(setColor, &quot;red&quot;).drawRect(0,0,100,100);
+	 *
+	 * 	// this will draw the rect in green:
+	 * 	myGraphics.beginFill(&quot;#000&quot;).inject(setColor, &quot;green&quot;).drawRect(0,0,100,100);
+	 *
+	 * 	// this will draw both rects in blue, because there is only a single path
+	 * 	// so the second inject overwrites the first:
+	 * 	myGraphics.beginFill(&quot;#000&quot;).inject(setColor, &quot;green&quot;).drawRect(0,0,100,100)
+	 * 		.inject(setColor, &quot;blue&quot;).drawRect(100,0,100,100);
+	 *
+	 * 	// this will draw the first rect in green, and the second in blue:
+	 * 	myGraphics.beginFill(&quot;#000&quot;).inject(setColor, &quot;green&quot;).drawRect(0,0,100,100)
+	 * 		.beginFill(&quot;#000&quot;).inject(setColor, &quot;blue&quot;).drawRect(100,0,100,100);
+	 *
+	 * @method inject
+	 * @param {Function} callback The function to execute.
+	 * @param {Object} data Arbitrary data that will be passed to the callback when it is executed.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.inject = function(callback, data) {
+		this._dirty = this._active = true;
+
+		this._activeInstructions.push(
+			new Command(callback, [data])
+		);
+		return this;
+	};
+
+	/**
+	 * Draws a star if pointSize is greater than 0, or a regular polygon if pointSize is 0 with the specified number of
+	 * points. For example, the following code will draw a familiar 5 pointed star shape centered at 100, 100 and with a
+	 * radius of 50:
+	 *
+	 *      myGraphics.beginFill(&quot;#FF0&quot;).drawPolyStar(100, 100, 50, 5, 0.6, -90);
+	 *      // Note: -90 makes the first point vertical
+	 *
+	 * A tiny API method &quot;dp&quot; also exists.
+	 *
+	 * @method drawPolyStar
+	 * @param {Number} x Position of the center of the shape.
+	 * @param {Number} y Position of the center of the shape.
+	 * @param {Number} radius The outer radius of the shape.
+	 * @param {Number} sides The number of points on the star or sides on the polygon.
+	 * @param {Number} pointSize The depth or &quot;pointy-ness&quot; of the star points. A pointSize of 0 will draw a regular
+	 * polygon (no points), a pointSize of 1 will draw nothing because the points are infinitely pointy.
+	 * @param {Number} angle The angle of the first point / corner. For example a value of 0 will draw the first point
+	 * directly to the right of the center.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.drawPolyStar = function(x, y, radius, sides, pointSize, angle) {
+		this._dirty = this._active = true;
+		if (pointSize == null) { pointSize = 0; }
+		pointSize = 1-pointSize;
+		if (angle == null) { angle = 0; }
+		else { angle /= 180/Math.PI; }
+		var a = Math.PI/sides;
+
+		this._activeInstructions.push(new Command(this._ctx.moveTo, [x+Math.cos(angle)*radius, y+Math.sin(angle)*radius]));
+		for (var i=0; i&lt;sides; i++) {
+			angle += a;
+			if (pointSize != 1) {
+				this._activeInstructions.push(new Command(this._ctx.lineTo, [x+Math.cos(angle)*radius*pointSize, y+Math.sin(angle)*radius*pointSize]));
+			}
+			angle += a;
+			this._activeInstructions.push(new Command(this._ctx.lineTo, [x+Math.cos(angle)*radius, y+Math.sin(angle)*radius]));
+		}
+		return this;
+	};
+
+	/**
+	 * Decodes a compact encoded path string into a series of draw instructions.
+	 * This format is not intended to be human readable, and is meant for use by authoring tools.
+	 * The format uses a base64 character set, with each character representing 6 bits, to define a series of draw
+	 * commands.
+	 *
+	 * Each command is comprised of a single &quot;header&quot; character followed by a variable number of alternating x and y
+	 * position values. Reading the header bits from left to right (most to least significant): bits 1 to 3 specify the
+	 * type of operation (0-moveTo, 1-lineTo, 2-quadraticCurveTo, 3-bezierCurveTo, 4-closePath, 5-7 unused). Bit 4
+	 * indicates whether position values use 12 bits (2 characters) or 18 bits (3 characters), with a one indicating the
+	 * latter. Bits 5 and 6 are currently unused.
+	 *
+	 * Following the header is a series of 0 (closePath), 2 (moveTo, lineTo), 4 (quadraticCurveTo), or 6 (bezierCurveTo)
+	 * parameters. These parameters are alternating x/y positions represented by 2 or 3 characters (as indicated by the
+	 * 4th bit in the command char). These characters consist of a 1 bit sign (1 is negative, 0 is positive), followed
+	 * by an 11 (2 char) or 17 (3 char) bit integer value. All position values are in tenths of a pixel. Except in the
+	 * case of move operations which are absolute, this value is a delta from the previous x or y position (as
+	 * appropriate).
+	 *
+	 * For example, the string &quot;A3cAAMAu4AAA&quot; represents a line starting at -150,0 and ending at 150,0.
+	 * &lt;br /&gt;A - bits 000000. First 3 bits (000) indicate a moveTo operation. 4th bit (0) indicates 2 chars per
+	 * parameter.
+	 * &lt;br /&gt;n0 - 110111011100. Absolute x position of -150.0px. First bit indicates a negative value, remaining bits
+	 * indicate 1500 tenths of a pixel.
+	 * &lt;br /&gt;AA - 000000000000. Absolute y position of 0.
+	 * &lt;br /&gt;I - 001100. First 3 bits (001) indicate a lineTo operation. 4th bit (1) indicates 3 chars per parameter.
+	 * &lt;br /&gt;Au4 - 000000101110111000. An x delta of 300.0px, which is added to the previous x value of -150.0px to
+	 * provide an absolute position of +150.0px.
+	 * &lt;br /&gt;AAA - 000000000000000000. A y delta value of 0.
+	 *
+	 * A tiny API method &quot;p&quot; also exists.
+	 * @method decodePath
+	 * @param {String} str The path string to decode.
+	 * @return {Graphics} The Graphics instance the method is called on (useful for chaining calls.)
+	 **/
+	p.decodePath = function(str) {
+		var instructions = [this.moveTo, this.lineTo, this.quadraticCurveTo, this.bezierCurveTo, this.closePath];
+		var paramCount = [2, 2, 4, 6, 0];
+		var i=0, l=str.length;
+		var params = [];
+		var x=0, y=0;
+		var base64 = Graphics.BASE_64;
+
+		while (i&lt;l) {
+			var c = str.charAt(i);
+			var n = base64[c];
+			var fi = n&gt;&gt;3; // highest order bits 1-3 code for operation.
+			var f = instructions[fi];
+			// check that we have a valid instruction &amp; that the unused bits are empty:
+			if (!f || (n&amp;3)) { throw(&quot;bad path data (@&quot;+i+&quot;): &quot;+c); }
+			var pl = paramCount[fi];
+			if (!fi) { x=y=0; } // move operations reset the position.
+			params.length = 0;
+			i++;
+			var charCount = (n&gt;&gt;2&amp;1)+2;  // 4th header bit indicates number size for this operation.
+			for (var p=0; p&lt;pl; p++) {
+				var num = base64[str.charAt(i)];
+				var sign = (num&gt;&gt;5) ? -1 : 1;
+				num = ((num&amp;31)&lt;&lt;6)|(base64[str.charAt(i+1)]);
+				if (charCount == 3) { num = (num&lt;&lt;6)|(base64[str.charAt(i+2)]); }
+				num = sign*num/10;
+				if (p%2) { x = (num += x); }
+				else { y = (num += y); }
+				params[p] = num;
+				i += charCount;
+			}
+			f.apply(this,params);
+		}
+		return this;
+	};
+
+	/**
+	 * Returns a clone of this Graphics instance.
+	 * @method clone
+	 * @return {Graphics} A clone of the current Graphics instance.
+	 **/
+	p.clone = function() {
+		var o = new Graphics();
+		o._instructions = this._instructions.slice();
+		o._activeInstructions = this._activeInstructions.slice();
+		o._oldInstructions = this._oldInstructions.slice();
+		if (this._fillInstructions) { o._fillInstructions = this._fillInstructions.slice(); }
+		if (this._strokeInstructions) { o._strokeInstructions = this._strokeInstructions.slice(); }
+		if (this._strokeStyleInstructions) { o._strokeStyleInstructions = this._strokeStyleInstructions.slice(); }
+		o._active = this._active;
+		o._dirty = this._dirty;
+		o._fillMatrix = this._fillMatrix;
+		o._strokeIgnoreScale = this._strokeIgnoreScale;
+		return o;
+	};
+
+	/**
+	 * Returns a string representation of this object.
+	 * @method toString
+	 * @return {String} a string representation of the instance.
+	 **/
+	p.toString = function() {
+		return &quot;[Graphics]&quot;;
+	};
+
+
+// tiny API:
+	/** Shortcut to moveTo.
+	 * @method mt
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.mt = p.moveTo;
+
+	/** Shortcut to lineTo.
+	 * @method lt
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.lt = p.lineTo;
+
+	/** Shortcut to arcTo.
+	 * @method at
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.at = p.arcTo;
+
+	/** Shortcut to bezierCurveTo.
+	 * @method bt
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.bt = p.bezierCurveTo;
+
+	/** Shortcut to quadraticCurveTo / curveTo.
+	 * @method qt
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.qt = p.quadraticCurveTo;
+
+	/** Shortcut to arc.
+	 * @method a
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.a = p.arc;
+
+	/** Shortcut to rect.
+	 * @method r
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.r = p.rect;
+
+	/** Shortcut to closePath.
+	 * @method cp
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.cp = p.closePath;
+
+	/** Shortcut to clear.
+	 * @method c
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.c = p.clear;
+
+	/** Shortcut to beginFill.
+	 * @method f
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.f = p.beginFill;
+
+	/** Shortcut to beginLinearGradientFill.
+	 * @method lf
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.lf = p.beginLinearGradientFill;
+
+	/** Shortcut to beginRadialGradientFill.
+	 * @method rf
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.rf = p.beginRadialGradientFill;
+
+	/** Shortcut to beginBitmapFill.
+	 * @method bf
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.bf = p.beginBitmapFill;
+
+	/** Shortcut to endFill.
+	 * @method ef
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.ef = p.endFill;
+
+	/** Shortcut to setStrokeStyle.
+	 * @method ss
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.ss = p.setStrokeStyle;
+
+	/** Shortcut to beginStroke.
+	 * @method s
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.s = p.beginStroke;
+
+	/** Shortcut to beginLinearGradientStroke.
+	 * @method ls
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.ls = p.beginLinearGradientStroke;
+
+	/** Shortcut to beginRadialGradientStroke.
+	 * @method rs
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.rs = p.beginRadialGradientStroke;
+
+	/** Shortcut to beginBitmapStroke.
+	 * @method bs
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.bs = p.beginBitmapStroke;
+
+	/** Shortcut to endStroke.
+	 * @method es
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.es = p.endStroke;
+
+	/** Shortcut to drawRect.
+	 * @method dr
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.dr = p.drawRect;
+
+	/** Shortcut to drawRoundRect.
+	 * @method rr
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.rr = p.drawRoundRect;
+
+	/** Shortcut to drawRoundRectComplex.
+	 * @method rc
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.rc = p.drawRoundRectComplex;
+
+	/** Shortcut to drawCircle.
+	 * @method dc
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.dc = p.drawCircle;
+
+	/** Shortcut to drawEllipse.
+	 * @method de
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.de = p.drawEllipse;
+
+	/** Shortcut to drawPolyStar.
+	 * @method dp
+	 * @protected
+	 * @type {Function}
+	 **/
+	p.dp = p.drawPolyStar;
+
+	/** Shortcut to decodePath.
+	 * @method p
+	 * @protected
+	 * @type Function
+	 **/
+	p.p = p.decodePath;
+
+
+// private methods:
+	/**
+	 * @method _updateInstructions
+	 * @protected
+	 **/
+	p._updateInstructions = function() {
+		this._instructions = this._oldInstructions.slice();
+		this._instructions.push(Graphics.beginCmd);
+
+		this._appendInstructions(this._fillInstructions);
+		this._appendInstructions(this._strokeInstructions);
+		this._appendInstructions(this._strokeInstructions&amp;&amp;this._strokeStyleInstructions);
+
+		this._appendInstructions(this._activeInstructions);
+
+		if (this._fillInstructions) {
+			this._appendDraw(Graphics.fillCmd, this._fillMatrix);
+		}
+		if (this._strokeInstructions) {
+			this._appendDraw(Graphics.strokeCmd, this._strokeIgnoreScale&amp;&amp;[1,0,0,1,0,0]);
+		}
+	};
+
+	/**
+	 * @method _appendInstructions
+	 * @protected
+	 **/
+	p._appendInstructions = function(instructions) {
+		if (instructions) { this._instructions.push.apply(this._instructions, instructions); }
+	};
+
+	/**
+	 * @method _appendDraw
+	 * @protected
+	 **/
+	p._appendDraw = function(command, matrixArr) {
+		if (!matrixArr) { this._instructions.push(command); }
+		else {
+			this._instructions.push(
+				new Command(this._ctx.save, [], false),
+				new Command(this._ctx.transform, matrixArr, false),
+				command,
+				new Command(this._ctx.restore, [], false)
+			);
+		}
+	};
+
+	/**
+	 * @method _newPath
+	 * @protected
+	 **/
+	p._newPath = function() {
+		if (this._dirty) { this._updateInstructions(); }
+		this._oldInstructions = this._instructions;
+		this._activeInstructions = [];
+		this._active = this._dirty = false;
+	};
+
+	// used to create Commands that set properties:
+	/**
+	 * Used to create Commands that set properties
+	 * @method _setProp
+	 * @param {String} name
+	 * @param {String} value
+	 * @protected
+	 **/
+	p._setProp = function(name, value) {
+		this[name] = value;
+	};
+
+createjs.Graphics = Graphics;
+}());
+
+    </pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-ks-scroll-styles.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

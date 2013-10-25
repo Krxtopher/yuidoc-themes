@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>sample-src/easeljs/filters/AlphaMapFilter.js - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="https://d3oaxc4q5k2d6q.cloudfront.net/m/5c85e8398db4/img/language-avatars/actionscript_64.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">&uarr; index</a></li>
+                <li><a href="#top" class="top-jump-link">&uarr; top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1 class="file-heading">File: sample-src/easeljs/filters/AlphaMapFilter.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+ * AlphaMapFilter
+ * Visit http://createjs.com/ for documentation, updates and examples.
+ *
+ * Copyright (c) 2010 gskinner.com, inc.
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the &quot;Software&quot;), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/**
+ * @module EaselJS
+ */
+
+// namespace:
+this.createjs = this.createjs || {};
+
+(function () {
+	&quot;use strict&quot;;
+	/**
+	 * Applies a greyscale alpha map image (or canvas) to the target, such that the alpha channel of the result will
+	 * be copied from the red channel of the map, and the RGB channels will be copied from the target.
+	 *
+	 * Generally, it is recommended that you use {{#crossLink &quot;AlphaMaskFilter&quot;}}{{/crossLink}}, because it has much
+	 * better performance.
+	 *
+	 * &lt;h4&gt;Example&lt;/h4&gt;
+	 * This example draws a red-&gt;blue box, caches it, and then uses the cache canvas as an alpha map on a 100x100 image.
+	 *
+	 *       var box = new createjs.Shape();
+	 *       box.graphics.beginLinearGradientFill([&quot;#ff0000&quot;, &quot;#0000ff&quot;], [0, 1], 0, 0, 0, 100)
+	 *       box.graphics.drawRect(0, 0, 100, 100);
+	 *       box.cache(0, 0, 100, 100);
+	 *
+	 *       var bmp = new createjs.Bitmap(&quot;path/to/image.jpg&quot;);
+	 *       bmp.filters = [
+	 *           new createjs.AlphaMapFilter(box.cacheCanvas)
+	 *       ];
+	 *       bmp.cache(0, 0, 100, 100);
+	 *       stage.addChild(bmp);
+	 *
+	 * See {{#crossLink &quot;Filter&quot;}}{{/crossLink}} for more information on applying filters.
+	 * @class AlphaMapFilter
+	 * @extends Filter
+	 * @constructor
+	 * @param {Image|HTMLCanvasElement} alphaMap The greyscale image (or canvas) to use as the alpha value for the
+	 * result. This should be exactly the same dimensions as the target.
+	 **/
+	var AlphaMapFilter = function (alphaMap) {
+		this.initialize(alphaMap);
+	};
+	var p = AlphaMapFilter.prototype = new createjs.Filter();
+
+// constructor:
+	/** @ignore */
+	p.initialize = function (alphaMap) {
+		this.alphaMap = alphaMap;
+	};
+
+// public properties:
+
+	/**
+	 * The greyscale image (or canvas) to use as the alpha value for the result. This should be exactly the same
+	 * dimensions as the target.
+	 * @property alphaMap
+	 * @type Image|HTMLCanvasElement
+	 **/
+	p.alphaMap = null;
+
+// private properties:
+	p._alphaMap = null;
+	p._mapData = null;
+
+// public methods:
+
+	p.applyFilter = function (ctx, x, y, width, height, targetCtx, targetX, targetY) {
+		if (!this.alphaMap) {
+			return true;
+		}
+		if (!this._prepAlphaMap()) {
+			return false;
+		}
+		targetCtx = targetCtx || ctx;
+		if (targetX == null) {
+			targetX = x;
+		}
+		if (targetY == null) {
+			targetY = y;
+		}
+
+		try {
+			var imageData = ctx.getImageData(x, y, width, height);
+		} catch (e) {
+			//if (!this.suppressCrossDomainErrors) throw new Error(&quot;unable to access local image data: &quot; + e);
+			return false;
+		}
+		var data = imageData.data;
+		var map = this._mapData;
+		var l = data.length;
+		for(var i = 0; i &lt; l; i += 4) {
+			data[i + 3] = map[i] || 0;
+		}
+		imageData.data = data;
+		targetCtx.putImageData(imageData, targetX, targetY);
+		return true;
+	};
+
+	/**
+	 * Returns a clone of this object.
+	 * @method clone
+	 * @return {AlphaMapFilter} A clone of the current AlphaMapFilter instance.
+	 **/
+	p.clone = function () {
+		return new AlphaMapFilter(this.alphaMap);
+	};
+
+	p.toString = function () {
+		return &quot;[AlphaMapFilter]&quot;;
+	};
+
+// private methods:
+	p._prepAlphaMap = function () {
+		if (!this.alphaMap) {
+			return false;
+		}
+		if (this.alphaMap == this._alphaMap &amp;&amp; this._mapData) {
+			return true;
+		}
+
+		this._mapData = null;
+		var map = this._alphaMap = this.alphaMap;
+		var canvas = map;
+		var ctx;
+		if (map instanceof HTMLCanvasElement) {
+			ctx = canvas.getContext(&quot;2d&quot;);
+		} else {
+			canvas = createjs.createCanvas ? createjs.createCanvas() : document.createElement(&quot;canvas&quot;);
+			canvas.width = map.width;
+			canvas.height = map.height;
+			ctx = canvas.getContext(&quot;2d&quot;);
+			ctx.drawImage(map, 0, 0);
+		}
+
+		try {
+			var imgData = ctx.getImageData(0, 0, map.width, map.height);
+		} catch (e) {
+			//if (!this.suppressCrossDomainErrors) throw new Error(&quot;unable to access local image data: &quot; + e);
+			return false;
+		}
+		this._mapData = imgData.data;
+		return true;
+	};
+
+	createjs.AlphaMapFilter = AlphaMapFilter;
+
+}());
+
+    </pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-ks-scroll-styles.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
