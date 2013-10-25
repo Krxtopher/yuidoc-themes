@@ -1,37 +1,51 @@
 (function($) {
 
-  "use strict";
+    "use strict";
 
-  $.fn.addClassWhenItemAboveViewport = function(className, triggerElement, offset) {
+    $.fn.addClassWhenItemAboveViewport = function(className, triggerElement, offset) {
 
-    var scrollUpdateNeeded = false;
+        var scrollUpdateNeeded = false;
 
-    var target = this;
-    if (offset === undefined) offset = 0;
-    var triggerElementPosition = $(triggerElement).offset().top;
+        var target = this;
 
-    $(window).scroll(function () {
+        var previousTriggers = target.data().ksScrollStyles;
+        var key = triggerElement + "|" + className;
+        if (previousTriggers && previousTriggers.hasOwnProperty(key)) {
+            return this;
+        }
 
-      if (!scrollUpdateNeeded) {
+        if (!previousTriggers) {
+            previousTriggers = {};
+        }
 
-        scrollUpdateNeeded = true;
+        previousTriggers[key] = true;
+        target.data("ksScrollStyles", previousTriggers);
 
-        setTimeout(function () {
+        if (offset === undefined) offset = 0;
+        var triggerElementPosition = $(triggerElement).offset().top;
 
-          scrollUpdateNeeded = false;
-          
-          if ($(window).scrollTop() > triggerElementPosition - offset) {
-            target.addClass(className);
-          } else {
-            target.removeClass(className);
-          }
-         } , 33);
-      }
-      
-    });
+        $(window).scroll(function() {
 
-    return this;
+            if (!scrollUpdateNeeded) {
 
-  };
+                scrollUpdateNeeded = true;
+
+                setTimeout(function() {
+
+                    scrollUpdateNeeded = false;
+
+                    if ($(window).scrollTop() > triggerElementPosition - offset) {
+                        target.addClass(className);
+                    } else {
+                        target.removeClass(className);
+                    }
+                }, 33);
+            }
+
+        });
+
+        return this;
+
+    };
 
 }(jQuery));
