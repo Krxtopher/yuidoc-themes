@@ -245,8 +245,14 @@ h5, h6 { font-size:1em; }
 
 
 /* Comma-separated list. */
-.apidocs ul.commas li:after { content: ', '; }
-.apidocs ul.commas li:last-child:after { content: ''; }
+.apidocs ul.commas li:after {
+    content: ',';
+    margin-right: 0.5em;
+}
+.apidocs ul.commas li:last-child:after {
+    content: '';
+    margin-right: 0;
+}
 
 
 /* Filters */
@@ -310,12 +316,11 @@ h5, h6 { font-size:1em; }
 
 .method h3 .flag,
 .property h3 .flag {
-    font-family: Consolas, Menlo, "Courier New", monospace;
     font-style: italic;
+    font-size: 0.8em;
     font-weight: normal;
     padding: 0 1em;
     color: #a0a0a0;
-    letter-spacing: -1px;
 }
 
 .method code,
@@ -367,6 +372,18 @@ h5, h6 { font-size:1em; }
     padding: 1px 15px;
 }
 
+.returns-inline {
+    padding-left: 2ex;
+}
+
+.returns-inline:before {
+    content: "returns";
+    font-weight: normal;
+    font-size: .8em;
+    padding-right: 0.5ex;
+    color: #a0a0a0;
+}
+
 /*---- Flags ----*/
 
 .flag.optional {
@@ -374,8 +391,7 @@ h5, h6 { font-size:1em; }
     font-style: italic;
 }
 .flag.deprecated {
-    color: rgba(0, 0, 0, .2);
-    font-size: 12px;
+    display: inline;
 }
 
 .index-item .flag.constructor {
