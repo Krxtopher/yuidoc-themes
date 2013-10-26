@@ -84,11 +84,11 @@ h4 {
 h5, h6 { font-size:1em; }
 
 .main-header {
-    position: fixed;  
-    width: 100%;  
-    left: 0;  
-    top: 0;  
-    z-index: 100;  
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
     text-align: center;
     background-image: linear-gradient(#3a3a3a, #2a2a2a);
     background-repeat: repeat-x;
@@ -455,16 +455,20 @@ ul.index-list {
 }
 
 .index-item a {
-    font-weight: bold;
+    font-weight: normal;
+}
+
+.index-item.inherited a {
+
 }
 
 .index-item.private a,
 .index-item.protected a {
-    font-weight: normal;
+    font-style: italic;
 }
 
 .index-item.deprecated {
-    font-style: italic;
+    text-decoration: line-through;
 }
 
 .index-item.deprecated a {
@@ -496,7 +500,7 @@ ul.index-list {
     font-weight: bold;
     color: #333;
     text-decoration: none;
-    position: relative;   
+    position: relative;
 }
 
 .yui3-tab-selected a:before,
@@ -514,7 +518,7 @@ ul.index-list {
     width: 0;
 }
 .yui3-tab-selected a:after {
-    background: transparent; 
+    background: transparent;
     border-bottom-color: #fafafa;
     bottom: -1px;
 }

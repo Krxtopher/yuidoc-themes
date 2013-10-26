@@ -128,28 +128,6 @@ YUI().use(
             });
         };
 
-        pjax.initClassTabView = function() {
-            if (!Y.all('#classdocs .api-class-tab').size()) {
-                return;
-            }
-
-            if (classTabView) {
-                classTabView.destroy();
-                selectedTab = null;
-            }
-
-            classTabView = new Y.TabView({
-                srcNode: '#classdocs',
-
-                on: {
-                    selectionChange: pjax.onTabSelectionChange
-                }
-            });
-
-            pjax.updateTabState();
-            classTabView.render();
-        };
-
         pjax.initLineNumbers = function() {
             var hash = win.location.hash.substring(1),
                 container = pjax.get('container'),
@@ -195,79 +173,6 @@ YUI().use(
             $('body').offscreenTrigger('index-offscreen', '.index', -100);
         };
 
-        pjax.updateTabState = function(src) {
-            var hash = win.location.hash.substring(1),
-                defaultTab, node, tab, tabPanel;
-
-            function scrollToNode() {
-                if (node.hasClass('protected')) {
-                    Y.one('#api-show-protected').set('checked', true);
-                    pjax.updateVisibility();
-                }
-
-                if (node.hasClass('private')) {
-                    Y.one('#api-show-private').set('checked', true);
-                    pjax.updateVisibility();
-                }
-
-                setTimeout(function() {
-                    // For some reason, unless we re-get the node instance here,
-                    // getY() always returns 0.
-                    var node = Y.one('#classdocs').getById(hash);
-                    win.scrollTo(0, node.getY() - 70);
-                }, 1);
-            }
-
-            if (!classTabView) {
-                return;
-            }
-
-            if (src === 'hashchange' && !hash) {
-                defaultTab = 'index';
-            } else {
-                if (localStorage) {
-                    defaultTab = localStorage.getItem('tab_' + pjax.getPath()) ||
-                        'index';
-                } else {
-                    defaultTab = 'index';
-                }
-            }
-
-            if (hash && (node = Y.one('#classdocs').getById(hash))) {
-                if ((tabPanel = node.ancestor('.api-class-tabpanel', true))) {
-                    if ((tab = Y.one('#classdocs .api-class-tab.' + tabPanel.get('id')))) {
-                        if (classTabView.get('rendered')) {
-                            Y.Widget.getByNode(tab).set('selected', 1);
-                        } else {
-                            tab.addClass('yui3-tab-selected');
-                        }
-                    }
-                }
-
-                // Scroll to the desired element if this is a hash URL.
-                if (node) {
-                    if (classTabView.get('rendered')) {
-                        scrollToNode();
-                    } else {
-                        classTabView.once('renderedChange', scrollToNode);
-                    }
-                }
-            } else {
-                tab = Y.one('#classdocs .api-class-tab.' + defaultTab);
-
-                // When the `defaultTab` node isn't found, `localStorage` is stale.
-                if (!tab && defaultTab !== 'index') {
-                    tab = Y.one('#classdocs .api-class-tab.index');
-                }
-
-                if (classTabView.get('rendered')) {
-                    Y.Widget.getByNode(tab).set('selected', 1);
-                } else {
-                    tab.addClass('yui3-tab-selected');
-                }
-            }
-        };
-
         pjax.updateVisibility = function() {
             var container = pjax.get('container');
 
@@ -292,14 +197,20 @@ YUI().use(
 
             // Handles success and local filesystem XHRs.
             if (!status || (status >= 200 && status < 300)) {
-                pjax.initClassTabView();
+
             }
+
+            pjax.initClassPage();
+
+            next();
+        };
+
+        pjax.initClassPage = function() {
 
             pjax.initIndexJumpLink();
             pjax.updateVisibility();
             Y.one('#api-options').delegate('click', pjax.onOptionClick, 'input');
 
-            next();
         };
 
         pjax.handleFiles = function(req, res, next) {
@@ -366,19 +277,20 @@ YUI().use(
 
         pjax.initRoot();
         pjax.upgrade();
-        pjax.initClassTabView();
         pjax.initLineNumbers();
 
         Y.APIList.rootPath = pjax.get('root');
 
         Y.on('hashchange', function(e) {
-            pjax.updateTabState('hashchange');
+            // pjax.updateTabState('hashchange');
         }, win);
 
         Y.on('domready', function() {
+
             $('.main-header').offscreenTrigger('compact', 'body', 20);
+
             if ($('.index').length) {
-                pjax.initIndexJumpLink();
+                pjax.initClassPage();
             }
         });
 
