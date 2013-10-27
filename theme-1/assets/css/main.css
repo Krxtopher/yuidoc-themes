@@ -83,6 +83,22 @@ h4 {
 
 h5, h6 { font-size:1em; }
 
+/* === Tables === */
+
+table {
+    border-collapse: collapse;
+    background-color: #fafafa;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+td {
+    padding: .75em;
+}
+
+
 .main-header {
     position: fixed;
     width: 100%;
@@ -206,16 +222,29 @@ h5, h6 { font-size:1em; }
     transition: opacity 0.5s ease 0.5s;
 }
 
-.index-jump-link {
+.jump-links .index-jump-link {
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
 }
 
-.index-offscreen .index-jump-link {
+.index-offscreen .jump-links .index-jump-link {
     opacity: 1;
     pointer-events: auto;
 }
+
+.top-jump-link,
+.index-jump-link {
+    font-style: normal;
+}
+
+.top-jump-link:before,
+.index-jump-link:before {
+    content: "\2191";
+    margin: 0 .2em;
+    font-style: normal;
+}
+
 
 .main-body {
     max-width: 1200px;
@@ -284,20 +313,72 @@ h5, h6 { font-size:1em; }
     font-size: 80%;
 }
 
+.no-visible-items-message {
+    display: none;
+}
+
+.no-visible-items .no-visible-items-message {
+    display: block;
+    color: #999;
+    font-style: italic;
+}
+
+/* === Properties === */
+
+.property.item {
+    margin: 3em 0;
+}
+
+.property h3 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.property h3 .type {
+    background-color: #e0e0e0;
+    border-color: #d0d0d0;
+    color: #666;
+    margin-left: .5em;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.property h3 .flag {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: normal;
+    padding: 0 1em;
+    color: #a0a0a0;
+}
+
+.property .meta {
+    color: #b0b0b0;
+    font-size: 13px;
+}
+
+.property .meta p {
+    margin: 0;
+}
+
+.property .meta a {
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+.property .extended-detail {
+
+}
 
 /*=== Methods ===*/
 
-.method.item,
-.property.item {
+.method.item {
     padding: 0;
-    margin: 1em 0;
+    margin: 2em 0;
     background-color: #fff;
     border: 3px solid #eee;
     border-radius: 3px;
 }
 
-.method h3,
-.property h3 {
+.method h3 {
     font-size: 16px;
     border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
@@ -308,14 +389,12 @@ h5, h6 { font-size:1em; }
     background-repeat: repeat-x;
 }
 
-.method h3 .type,
-.property h3 .type {
+.method h3 .type {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
 }
 
-.method h3 .flag,
-.property h3 .flag {
+.method h3 .flag {
     font-style: italic;
     font-size: 0.8em;
     font-weight: normal;
@@ -343,8 +422,7 @@ h5, h6 { font-size:1em; }
     padding: 0;
 }
 
-.method .meta,
-.property .meta {
+.method .meta {
     background-color: #f8f8f8;
     margin: 0;
     padding: 5px 10px;
@@ -354,22 +432,50 @@ h5, h6 { font-size:1em; }
     font-size: 13px;
 }
 
-.method .meta p,
-.property .meta p {
+.method .meta p {
     margin: 0;
 }
 
-.method .meta a,
-.property .meta a {
+.method .meta a {
     color: #999;
 }
 
-.method .extended-detail,
-.property .extended-detail {
+.params-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.params-list,
+.returns-description {
+    margin: 0 0 0 .7em;
+}
+
+.params-list .param-name {
+    font-weight: bold
+}
+
+.params-list .param .flag {
+    font-size: .85em;
+}
+
+.params-list .param-description {
+    margin: 0;
+}
+
+.params-list .param-description p,
+.returns-description p {
+    margin: .5em 0 1.5em 1.5em;
+}
+
+.param .type {
+    margin-left: .5em;
+}
+
+.method .extended-detail {
     border: 1px solid #cacaca;
     border-top: 1px transparent;
     margin: 0;
-    padding: 1px 15px;
+    padding: .1em 2em 2em 2em;
 }
 
 .returns-inline {

@@ -67,65 +67,27 @@ YUI().use(
 
         // -- Utility Functions --------------------------------------------------------
 
-        pjax.checkVisibility = function(tab) {
-            tab || (tab = selectedTab);
+        pjax.checkMemberItemVisibility = function(container) {
 
-            if (!tab) {
-                return;
+            var visibleItems;
+
+            var items$ = $(container).children(".item");
+            visibleItems = items$.filter(":visible");
+
+            if (visibleItems.length) {
+                $(container).removeClass("no-visible-items");
+            } else {
+                $(container).addClass("no-visible-items");
             }
 
-            var panelNode = tab.get('panelNode'),
-                visibleItems;
+        };
 
-            // If no items are visible in the tab panel due to the current visibility
-            // settings, display a message to that effect.
-            visibleItems = panelNode.all('.item,.index-item').some(function(itemNode) {
-                if (itemNode.getComputedStyle('display') !== 'none') {
-                    return true;
-                }
-            });
+        pjax.checkVisibility = function() {
 
-            panelNode.all('.no-visible-items').remove();
+            pjax.checkMemberItemVisibility($(".properties-detail"));
+            pjax.checkMemberItemVisibility($(".methods-detail"));
+            pjax.checkMemberItemVisibility($(".events-detail"));
 
-            if (!visibleItems) {
-                if (Y.one('#index .index-item')) {
-                    panelNode.append(
-                        '<div class="no-visible-items">' +
-                        '<p>' +
-                        'Some items are not shown due to the current visibility ' +
-                        'settings. Use the checkboxes at the upper right of this ' +
-                        'page to change the visibility settings.' +
-                        '</p>' +
-                        '</div>'
-                    );
-                } else {
-                    panelNode.append(
-                        '<div class="no-visible-items">' +
-                        '<p>' +
-                        'This class doesn\'t provide any methods, properties, ' +
-                        'attributes, or events.' +
-                        '</p>' +
-                        '</div>'
-                    );
-                }
-            }
-
-            // Hide index sections without any visible items.
-            Y.all('.index-section').each(function(section) {
-                var items = 0,
-                    visibleItems = 0;
-
-                section.all('.index-item').each(function(itemNode) {
-                    items += 1;
-
-                    if (itemNode.getComputedStyle('display') !== 'none') {
-                        visibleItems += 1;
-                    }
-                });
-
-                section.toggleClass('hidden', !visibleItems);
-                section.toggleClass('no-columns', visibleItems < 4);
-            });
         };
 
         pjax.initLineNumbers = function() {
