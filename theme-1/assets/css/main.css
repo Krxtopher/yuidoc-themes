@@ -5,7 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    margin-top: 80px;
+    margin-top: 65px;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     margin:1em 0 15px;
   padding:0;
   font-weight:bold;
-  line-height:1.7;
+  line-height:1.2;
   cursor:text;
   position:relative;
 }
@@ -119,7 +119,7 @@ td {
 
 .main-header .content {
     position: relative;
-    top: 0;
+    top: .4em;
     left: 0;
     max-width: 1200px;
     padding: 0;
@@ -191,7 +191,7 @@ td {
 }
 
 .compact .jump-links {
-    bottom: 9px;
+    bottom: 1em;
 }
 
 .jump-links a {
@@ -323,6 +323,13 @@ td {
     font-style: italic;
 }
 
+.meta .type {
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    padding: inherit;
+}
+
 /* === Properties === */
 
 .property.item,
@@ -391,7 +398,7 @@ td {
     border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
     margin: 0;
-    padding: 10px 10px 4px 10px;
+    padding: 10px 10px 9px 10px;
     color: #555;
     background-image: linear-gradient(#fafafa, #eaeaea);
     background-repeat: repeat-x;
@@ -411,8 +418,13 @@ td {
 }
 
 .method code,
-.property code {
+.property code,
+.default-value {
     font-family: Consolas, Menlo, "Courier New", monospace;
+}
+
+.default-value {
+    margin-left: .4em;
 }
 
 .args {
@@ -442,10 +454,6 @@ td {
 
 .method .meta p {
     margin: 0;
-}
-
-.method .meta a {
-    color: #999;
 }
 
 .params-list {
@@ -584,6 +592,29 @@ ul.index-list {
     column-count: 4;
 }
 
+@media (max-width: 1030px) {
+
+    ul.index-list {
+    -moz-column-count: 3;
+    -ms-column-count: 3;
+    -o-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    }
+
+}
+
+@media (max-width: 890px) {
+
+    ul.index-list {
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    }
+
+}
 .index-item a {
     font-weight: normal;
 }
