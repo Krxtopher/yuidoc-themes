@@ -325,16 +325,19 @@ td {
 
 /* === Properties === */
 
-.property.item {
+.property.item,
+.events.item {
     margin: 3em 0;
 }
 
-.property h3 {
+.property h3,
+.events h3 {
     font-size: 1.1em;
     margin-bottom: 0;
 }
 
-.property h3 .type {
+.property h3 .type,
+.events h3 .type {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
     color: #666;
@@ -342,7 +345,8 @@ td {
     text-shadow: 0 1px 0 #fff;
 }
 
-.property h3 .flag {
+.property h3 .flag,
+.events h3 .flag {
     font-style: italic;
     font-size: .9em;
     font-weight: normal;
@@ -350,21 +354,25 @@ td {
     color: #a0a0a0;
 }
 
-.property .meta {
+.property .meta,
+.events .meta {
     color: #b0b0b0;
     font-size: 13px;
 }
 
-.property .meta p {
+.property .meta p,
+.events .meta p {
     margin: 0;
 }
 
-.property .meta a {
+.property .meta a
+.events .meta a {
     color: #b0b0b0;
     text-decoration: underline;
 }
 
-.property .extended-detail {
+.property .extended-detail,
+.events .extended-detail {
 
 }
 
