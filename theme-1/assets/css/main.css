@@ -337,14 +337,14 @@ td {
     margin: 3em 0;
 }
 
-.property h3,
-.events h3 {
+.property.item h3,
+.events.item h3 {
     font-size: 1.1em;
     margin-bottom: 0;
 }
 
-.property h3 .type,
-.events h3 .type {
+.property.item h3 .type,
+.events.item h3 .type {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
     color: #666;
@@ -352,8 +352,8 @@ td {
     text-shadow: 0 1px 0 #fff;
 }
 
-.property h3 .flag,
-.events h3 .flag {
+.property.item h3 .flag,
+.events.item h3 .flag {
     font-style: italic;
     font-size: .9em;
     font-weight: normal;
@@ -361,19 +361,19 @@ td {
     color: #a0a0a0;
 }
 
-.property .meta,
-.events .meta {
+.property.item .meta,
+.events.item .meta {
     color: #b0b0b0;
     font-size: 13px;
 }
 
-.property .meta p,
-.events .meta p {
+.property.item .meta p,
+.events.item .meta p {
     margin: 0;
 }
 
-.property .meta a
-.events .meta a {
+.property.item .meta a
+.events.item .meta a {
     color: #b0b0b0;
     text-decoration: underline;
 }
@@ -393,7 +393,7 @@ td {
     border-radius: 3px;
 }
 
-.method h3 {
+.method.item h3 {
     font-size: 16px;
     border: 1px solid #cacaca;
     text-shadow: 0 1px 0 #fff;
@@ -404,12 +404,12 @@ td {
     background-repeat: repeat-x;
 }
 
-.method h3 .type {
+.method.item h3 .type {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
 }
 
-.method h3 .flag {
+.method.item h3 .flag {
     font-style: italic;
     font-size: 0.8em;
     font-weight: normal;
@@ -417,8 +417,8 @@ td {
     color: #a0a0a0;
 }
 
-.method code,
-.property code,
+.item code,
+.item code,
 .default-value {
     font-family: Consolas, Menlo, "Courier New", monospace;
 }
