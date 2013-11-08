@@ -6,7 +6,7 @@ This repository currently contains one theme - "friendly-theme" - for use with Y
 
 ## "Friendly" Theme
 
-<img src="readme-assets/after.png" style="box-shadow: 0px 0px 6px rgba(0, 0, 0, .3)">
+<img src="readme-assets/friendly-theme.png">
 
 ## Installation Instructions
 
