@@ -36,7 +36,7 @@ For more detail on YUIDoc configuration see the [command line options](http://yu
 
 ## How To Use (Windows instructions)
 
-*Help make this documentation better by contributing to this section and submitted a pull request!
+*Help make this documentation better by contributing to this section and submitting a pull request!*
 
 ## Report Bugs
 
