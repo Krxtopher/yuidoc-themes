@@ -34,6 +34,10 @@ The command above uses "friendly-theme" located on your Desktop to generate API 
 
 For more detail on YUIDoc configuration see the [command line options](http://yui.github.io/yuidoc/args/index.html#command-line) and [JSON configuration file](http://yui.github.io/yuidoc/args/index.html#json) documentation on the YUIDoc website.
 
+## How To Use (Windows instructions)
+
+*Help make this documentation better by contributing to this section and submitted a pull request!
+
 ## Report Bugs
 
-If you encounter issues while using "theme-1" please [report it](https://github.com/Krxtopher/yuidoc-themes/issues)!
+If you encounter issues while using these themes please [report them](https://github.com/Krxtopher/yuidoc-themes/issues)! Be sure to include the name of the theme in your description.
