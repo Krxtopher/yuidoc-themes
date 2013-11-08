@@ -4,7 +4,7 @@
         "description": "A JavaScript API that brings Flash's display list to HTML canvas.",
         "version": "0.7.0",
         "url": "http://www.createjs.com/#!/EaselJS",
-        "logo": "/easeljs-logo.png"
+        "logo": "http://krxtopher.github.io/yuidoc-themes/easeljs-logo.png"
     },
     "files": {
         "createjs/events/Event.js": {
