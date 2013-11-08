@@ -10,7 +10,7 @@ This repository currently contains one theme - "friendly-theme" - for use with Y
 
 ## Installation Instructions
 
-1. Clone this repository or [download it as a ZIP file](https://github.com/Krxtopher/yuidoc-themes/archive/master.zip).
+1. Clone this repository or [download it as a ZIP file](archive/master.zip).
 2. Copy the "friendly-theme" directory to a convenient location. Feel free to delete all other files from the repository.
 
 ## How To Use (Mac instructions)
@@ -36,4 +36,4 @@ For more detail on YUIDoc configuration see the [command line options](http://yu
 
 ## Report Bugs
 
-If you encounter issues while using "theme-1" please [report it](https://github.com/Krxtopher/yuidoc-themes/issues)!
+If you encounter issues while using "theme-1" please [report it](issues)!
