@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>easeljs/ui/Touch.js - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="../easeljs-logo.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">index</a></li>
+                <li><a href="#top" class="top-jump-link">top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1 class="file-heading">File: easeljs/ui/Touch.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+* Touch
+* Visit http://createjs.com/ for documentation, updates and examples.
+*
+* Copyright (c) 2010 gskinner.com, inc.
+*
+* Permission is hereby granted, free of charge, to any person
+* obtaining a copy of this software and associated documentation
+* files (the &quot;Software&quot;), to deal in the Software without
+* restriction, including without limitation the rights to use,
+* copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the
+* Software is furnished to do so, subject to the following
+* conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+* OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/**
+ * @module EaselJS
+ */
+
+// namespace:
+this.createjs = this.createjs||{};
+
+(function() {
+	&quot;use strict&quot;;
+
+// TODO: support for double tap.
+/**
+ * Global utility for working with multi-touch enabled devices in EaselJS. Currently supports W3C Touch API (iOS and
+ * modern Android browser) and the Pointer API (IE).
+ *
+ * Ensure that you {{#crossLink &quot;Touch/disable&quot;}}{{/crossLink}} touch when cleaning up your application.
+ * Note that you do not have to check if touch is supported to enable it, as it will fail gracefully if it is not
+ * supported.
+ *
+ * &lt;h4&gt;Example&lt;/h4&gt;
+ *
+ *      var stage = new createjs.Stage(&quot;canvasId&quot;);
+ *      createjs.Touch.enable(stage);
+ *
+ * &lt;strong&gt;Note:&lt;/strong&gt; It is important to disable Touch on a stage that you are no longer using:
+ *
+ *      createjs.Touch.disable(stage);
+ *
+ * @class Touch
+ * @static
+ **/
+var Touch = function() {
+	throw &quot;Touch cannot be instantiated&quot;;
+};
+
+// Public static methods:
+	/**
+	 * Returns true if touch is supported in the current browser.
+	 * @method isSupported
+	 * @return {Boolean} Indicates whether touch is supported in the current browser.
+	 * @static
+	 **/
+	Touch.isSupported = function() {
+		return	(&#x27;ontouchstart&#x27; in window) || // iOS
+					(window.navigator[&#x27;msPointerEnabled&#x27;] &amp;&amp; window.navigator[&#x27;msMaxTouchPoints&#x27;] &gt; 0); // IE10
+	};
+
+	/**
+	 * Enables touch interaction for the specified EaselJS stage. Currently supports iOS (and compatible browsers, such
+	 * as modern Android browsers), and IE10. Supports both single touch and multi-touch modes. Extends the EaselJS
+	 * MouseEvent model, but without support for double click or over/out events. See &lt;code&gt;MouseEvent.pointerID&lt;/code&gt;
+	 * for more information.
+	 * @method enable
+	 * @param {Stage} stage The stage to enable touch on.
+	 * @param {Boolean} [singleTouch=false] If true, only a single touch will be active at a time.
+	 * @param {Boolean} [allowDefault=false] If true, then default gesture actions (ex. scrolling, zooming) will be
+	 * allowed when the user is interacting with the target canvas.
+	 * @return {Boolean} Returns true if touch was successfully enabled on the target stage.
+	 * @static
+	 **/
+	Touch.enable = function(stage, singleTouch, allowDefault) {
+		if (!stage || !stage.canvas || !Touch.isSupported()) { return false; }
+
+		// inject required properties on stage:
+		stage.__touch = {pointers:{}, multitouch:!singleTouch, preventDefault:!allowDefault, count:0};
+
+		// note that in the future we may need to disable the standard mouse event model before adding
+		// these to prevent duplicate calls. It doesn&#x27;t seem to be an issue with iOS devices though.
+		if (&#x27;ontouchstart&#x27; in window) { Touch._IOS_enable(stage); }
+		else if (window.navigator[&#x27;msPointerEnabled&#x27;]) { Touch._IE_enable(stage); }
+		return true;
+	};
+
+	/**
+	 * Removes all listeners that were set up when calling Touch.enable on a stage.
+	 * @method disable
+	 * @param {Stage} stage The stage to disable touch on.
+	 * @static
+	 **/
+	Touch.disable = function(stage) {
+		if (!stage) { return; }
+		if (&#x27;ontouchstart&#x27; in window) { Touch._IOS_disable(stage); }
+		else if (window.navigator[&#x27;msPointerEnabled&#x27;]) { Touch._IE_disable(stage); }
+	};
+
+// Private static methods:
+
+	/**
+	 * @method _IOS_enable
+	 * @protected
+	 * @param {Stage} stage
+	 * @static
+	 **/
+	Touch._IOS_enable = function(stage) {
+		var canvas = stage.canvas;
+		var f = stage.__touch.f = function(e) { Touch._IOS_handleEvent(stage,e); };
+		canvas.addEventListener(&quot;touchstart&quot;, f, false);
+		canvas.addEventListener(&quot;touchmove&quot;, f, false);
+		canvas.addEventListener(&quot;touchend&quot;, f, false);
+		canvas.addEventListener(&quot;touchcancel&quot;, f, false);
+	};
+
+	/**
+	 * @method _IOS_disable
+	 * @protected
+	 * @param {Stage} stage
+	 * @static
+	 **/
+	Touch._IOS_disable = function(stage) {
+		var canvas = stage.canvas;
+		if (!canvas) { return; }
+		var f = stage.__touch.f;
+		canvas.removeEventListener(&quot;touchstart&quot;, f, false);
+		canvas.removeEventListener(&quot;touchmove&quot;, f, false);
+		canvas.removeEventListener(&quot;touchend&quot;, f, false);
+		canvas.removeEventListener(&quot;touchcancel&quot;, f, false);
+	};
+
+	/**
+	 * @method _IOS_handleEvent
+	 * @param {Stage} stage
+	 * @param {Object} e The event to handle
+	 * @protected
+	 * @static
+	 **/
+	Touch._IOS_handleEvent = function(stage, e) {
+		if (!stage) { return; }
+		if (stage.__touch.preventDefault) { e.preventDefault&amp;&amp;e.preventDefault(); }
+		var touches = e.changedTouches;
+		var type = e.type;
+		for (var i= 0,l=touches.length; i&lt;l; i++) {
+			var touch = touches[i];
+			var id = touch.identifier;
+			if (touch.target != stage.canvas) { continue; }
+
+			if (type == &quot;touchstart&quot;) {
+				this._handleStart(stage, id, e, touch.pageX, touch.pageY);
+			} else if (type == &quot;touchmove&quot;) {
+				this._handleMove(stage, id, e, touch.pageX, touch.pageY);
+			} else if (type == &quot;touchend&quot; || type == &quot;touchcancel&quot;) {
+				this._handleEnd(stage, id, e);
+			}
+		}
+	};
+
+	/**
+	 * @method _IE_enable
+	 * @protected
+	 * @param {Stage} stage
+	 * @static
+	 **/
+	Touch._IE_enable = function(stage) {
+		var canvas = stage.canvas;
+		var f = stage.__touch.f = function(e) { Touch._IE_handleEvent(stage,e); };
+		canvas.addEventListener(&quot;MSPointerDown&quot;, f, false);
+		window.addEventListener(&quot;MSPointerMove&quot;, f, false);
+		window.addEventListener(&quot;MSPointerUp&quot;, f, false);
+		window.addEventListener(&quot;MSPointerCancel&quot;, f, false);
+		if (stage.__touch.preventDefault) { canvas.style.msTouchAction = &quot;none&quot;; }
+		stage.__touch.activeIDs = {};
+	};
+
+	/**
+	 * @method _IE_disable
+	 * @protected
+	 * @param {Stage} stage
+	 * @static
+	 **/
+	Touch._IE_disable = function(stage) {
+		var f = stage.__touch.f;
+		window.removeEventListener(&quot;MSPointerMove&quot;, f, false);
+		window.removeEventListener(&quot;MSPointerUp&quot;, f, false);
+		window.removeEventListener(&quot;MSPointerCancel&quot;, f, false);
+		if (stage.canvas) {
+			stage.canvas.removeEventListener(&quot;MSPointerDown&quot;, f, false);
+		}
+	};
+
+	/**
+	 * @method _IE_handleEvent
+	 * @param {Stage} stage
+	 * @param {Object} e The event to handle.
+	 * @protected
+	 * @static
+	 **/
+	Touch._IE_handleEvent = function(stage, e) {
+		if (!stage) { return; }
+		if (stage.__touch.preventDefault) { e.preventDefault&amp;&amp;e.preventDefault(); }
+		var type = e.type;
+		var id = e.pointerId;
+		var ids = stage.__touch.activeIDs;
+
+		if (type == &quot;MSPointerDown&quot;) {
+			if (e.srcElement != stage.canvas) { return; }
+			ids[id] = true;
+			this._handleStart(stage, id, e, e.pageX, e.pageY);
+		} else if (ids[id]) { // it&#x27;s an id we&#x27;re watching
+			if (type == &quot;MSPointerMove&quot;) {
+				this._handleMove(stage, id, e, e.pageX, e.pageY);
+			} else if (type == &quot;MSPointerUp&quot; || type == &quot;MSPointerCancel&quot;) {
+				delete(ids[id]);
+				this._handleEnd(stage, id, e);
+			}
+		}
+	};
+
+
+	/**
+	 * @method _handleStart
+	 * @param {Stage} stage
+	 * @param {String|Number} id
+	 * @param {Object} e
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @protected
+	 **/
+	Touch._handleStart = function(stage, id, e, x, y) {
+		var props = stage.__touch;
+		if (!props.multitouch &amp;&amp; props.count) { return; }
+		var ids = props.pointers;
+		if (ids[id]) { return; }
+		ids[id] = true;
+		props.count++;
+		stage._handlePointerDown(id, e, x, y);
+	};
+
+	/**
+	 * @method _handleMove
+	 * @param {Stage} stage
+	 * @param {String|Number} id
+	 * @param {Object} e
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @protected
+	 **/
+	Touch._handleMove = function(stage, id, e, x, y) {
+		if (!stage.__touch.pointers[id]) { return; }
+		stage._handlePointerMove(id, e, x, y);
+	};
+
+	/**
+	 * @method _handleEnd
+	 * @param {Stage} stage
+	 * @param {String|Number} id
+	 * @param {Object} e
+	 * @protected
+	 **/
+	Touch._handleEnd = function(stage, id, e) {
+		// TODO: cancel should be handled differently for proper UI (ex. an up would trigger a click, a cancel would more closely resemble an out).
+		var props = stage.__touch;
+		var ids = props.pointers;
+		if (!ids[id]) { return; }
+		props.count--;
+		stage._handlePointerUp(id, e, true);
+		delete(ids[id]);
+	};
+
+
+createjs.Touch = Touch;
+}());
+
+    </pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-offscreen-trigger.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

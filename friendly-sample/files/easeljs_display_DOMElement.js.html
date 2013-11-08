@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>easeljs/display/DOMElement.js - CreateJS API</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../assets/vendor/yui-min.js"></script>
+</head>
+<body>
+
+<div id="doc">
+    <header class="main-header">
+        <div class="content">
+            <div class="project-title">
+                
+                    <img class="logo" src="../easeljs-logo.png" title="CreateJS API">
+                
+                
+                    <h1 class="project-name">CreateJS API</h1> <span class="project-version">0.7.0</span>
+                
+                
+                    <p class="description">A JavaScript API that brings Flash&#x27;s display list to HTML canvas.</p>
+                
+            </div>
+            <ul class="jump-links">
+                <li><a href="#index" class="index-jump-link">index</a></li>
+                <li><a href="#top" class="top-jump-link">top</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="bd" class="main-body">
+
+        <div id="docs-sidebar" class="sidebar apidocs">
+            <div id="api-list">
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a class="type" href="../classes/AlphaMapFilter.html">AlphaMapFilter</a></li>
+            
+                <li><a class="type" href="../classes/AlphaMaskFilter.html">AlphaMaskFilter</a></li>
+            
+                <li><a class="type" href="../classes/Bitmap.html">Bitmap</a></li>
+            
+                <li><a class="type" href="../classes/BitmapAnimation.html">BitmapAnimation</a></li>
+            
+                <li><a class="type" href="../classes/BitmapText.html">BitmapText</a></li>
+            
+                <li><a class="type" href="../classes/BlurFilter.html">BlurFilter</a></li>
+            
+                <li><a class="type" href="../classes/ButtonHelper.html">ButtonHelper</a></li>
+            
+                <li><a class="type" href="../classes/ColorFilter.html">ColorFilter</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrix.html">ColorMatrix</a></li>
+            
+                <li><a class="type" href="../classes/ColorMatrixFilter.html">ColorMatrixFilter</a></li>
+            
+                <li><a class="type" href="../classes/Command.html">Command</a></li>
+            
+                <li><a class="type" href="../classes/Container.html">Container</a></li>
+            
+                <li><a class="type" href="../classes/DisplayObject.html">DisplayObject</a></li>
+            
+                <li><a class="type" href="../classes/DOMElement.html">DOMElement</a></li>
+            
+                <li><a class="type" href="../classes/EaselJS.html">EaselJS</a></li>
+            
+                <li><a class="type" href="../classes/Event.html">Event</a></li>
+            
+                <li><a class="type" href="../classes/EventDispatcher.html">EventDispatcher</a></li>
+            
+                <li><a class="type" href="../classes/Filter.html">Filter</a></li>
+            
+                <li><a class="type" href="../classes/Graphics.html">Graphics</a></li>
+            
+                <li><a class="type" href="../classes/Matrix2D.html">Matrix2D</a></li>
+            
+                <li><a class="type" href="../classes/MouseEvent.html">MouseEvent</a></li>
+            
+                <li><a class="type" href="../classes/MovieClip.html">MovieClip</a></li>
+            
+                <li><a class="type" href="../classes/MovieClipPlugin.html">MovieClipPlugin</a></li>
+            
+                <li><a class="type" href="../classes/Point.html">Point</a></li>
+            
+                <li><a class="type" href="../classes/Rectangle.html">Rectangle</a></li>
+            
+                <li><a class="type" href="../classes/Shadow.html">Shadow</a></li>
+            
+                <li><a class="type" href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a class="type" href="../classes/Sprite.html">Sprite</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheet.html">SpriteSheet</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetBuilder.html">SpriteSheetBuilder</a></li>
+            
+                <li><a class="type" href="../classes/SpriteSheetUtils.html">SpriteSheetUtils</a></li>
+            
+                <li><a class="type" href="../classes/Stage.html">Stage</a></li>
+            
+                <li><a class="type" href="../classes/Text.html">Text</a></li>
+            
+                <li><a class="type" href="../classes/Ticker.html">Ticker</a></li>
+            
+                <li><a class="type" href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a class="type" href="../classes/UID.html">UID</a></li>
+            
+                <li><a class="type" href="../classes/Utility Methods.html">Utility Methods</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a class="module" href="../modules/CreateJS.html">CreateJS</a></li>
+            
+                <li><a class="module" href="../modules/EaselJS.html">EaselJS</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div id="docs-main" class="apidocs">
+            <div class="content container">
+                <h1 class="file-heading">File: easeljs/display/DOMElement.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+* DOMElement
+* Visit http://createjs.com/ for documentation, updates and examples.
+*
+* Copyright (c) 2010 gskinner.com, inc.
+*
+* Permission is hereby granted, free of charge, to any person
+* obtaining a copy of this software and associated documentation
+* files (the &quot;Software&quot;), to deal in the Software without
+* restriction, including without limitation the rights to use,
+* copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the
+* Software is furnished to do so, subject to the following
+* conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+* OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/**
+ * @module EaselJS
+ */
+
+// namespace:
+this.createjs = this.createjs||{};
+
+(function() {
+	&quot;use strict&quot;;
+// TODO: fix problems with rotation.
+// TODO: exclude from getObjectsUnderPoint
+
+/**
+ * &lt;b&gt;This class is still experimental, and more advanced use is likely to be buggy. Please report bugs.&lt;/b&gt;
+ *
+ * A DOMElement allows you to associate a HTMLElement with the display list. It will be transformed
+ * within the DOM as though it is child of the {{#crossLink &quot;Container&quot;}}{{/crossLink}} it is added to. However, it is
+ * not rendered to canvas, and as such will retain whatever z-index it has relative to the canvas (ie. it will be
+ * drawn in front of or behind the canvas).
+ *
+ * The position of a DOMElement is relative to their parent node in the DOM. It is recommended that
+ * the DOM Object be added to a div that also contains the canvas so that they share the same position
+ * on the page.
+ *
+ * DOMElement is useful for positioning HTML elements over top of canvas content, and for elements
+ * that you want to display outside the bounds of the canvas. For example, a tooltip with rich HTML
+ * content.
+ *
+ * &lt;h4&gt;Mouse Interaction&lt;/h4&gt;
+ *
+ * DOMElement instances are not full EaselJS display objects, and do not participate in EaselJS mouse
+ * events or support methods like hitTest. To get mouse events from a DOMElement, you must instead add handlers to
+ * the htmlElement (note, this does not support EventDispatcher)
+ *
+ *      var domElement = new createjs.DOMElement(htmlElement);
+ *      domElement.htmlElement.onclick = function() {
+ *          console.log(&quot;clicked&quot;);
+ *      }
+ *
+ * @class DOMElement
+ * @extends DisplayObject
+ * @constructor
+ * @param {HTMLElement} htmlElement A reference or id for the DOM element to manage.
+ */
+var DOMElement = function(htmlElement) {
+  this.initialize(htmlElement);
+};
+var p = DOMElement.prototype = new createjs.DisplayObject();
+
+// public properties:
+	/**
+	 * The DOM object to manage.
+	 * @property htmlElement
+	 * @type HTMLElement
+	 */
+	p.htmlElement = null;
+
+// private properties:
+	/**
+	 * @property _oldMtx
+	 * @type Matrix2D
+	 * @protected
+	 */
+	p._oldMtx = null;
+	
+	/**
+	 * @property _visible
+	 * @type Boolean
+	 * @protected
+	 */
+	p._visible = false;
+
+// constructor:
+	/**
+	 * @property DisplayObject_initialize
+	 * @type Function
+	 * @private
+	 */
+	p.DisplayObject_initialize = p.initialize;
+
+	/**
+	 * Initialization method.
+	 * @method initialize
+	 * @param {HTMLElement} htmlElement A reference or id for the DOM element to manage.
+	 * @protected
+	*/
+	p.initialize = function(htmlElement) {
+		if (typeof(htmlElement)==&quot;string&quot;) { htmlElement = document.getElementById(htmlElement); }
+		this.DisplayObject_initialize();
+		this.mouseEnabled = false;
+		this.htmlElement = htmlElement;
+		var style = htmlElement.style;
+		// this relies on the _tick method because draw isn&#x27;t called if a parent is not visible.
+		style.position = &quot;absolute&quot;;
+		style.transformOrigin = style.WebkitTransformOrigin = style.msTransformOrigin = style.MozTransformOrigin = style.OTransformOrigin = &quot;0% 0%&quot;;
+	};
+
+// public methods:
+	/**
+	 * Returns true or false indicating whether the display object would be visible if drawn to a canvas.
+	 * This does not account for whether it would be visible within the boundaries of the stage.
+	 * NOTE: This method is mainly for internal use, though it may be useful for advanced uses.
+	 * @method isVisible
+	 * @return {Boolean} Boolean indicating whether the display object would be visible if drawn to a canvas
+	 */
+	p.isVisible = function() {
+		return this.htmlElement != null;
+	};
+
+	/**
+	 * Draws the display object into the specified context ignoring its visible, alpha, shadow, and transform.
+	 * Returns true if the draw was handled (useful for overriding functionality).
+	 * NOTE: This method is mainly for internal use, though it may be useful for advanced uses.
+	 * @method draw
+	 * @param {CanvasRenderingContext2D} ctx The canvas 2D context object to draw into.
+	 * @param {Boolean} ignoreCache Indicates whether the draw operation should ignore any current cache.
+	 * For example, used for drawing the cache (to prevent it from simply drawing an existing cache back
+	 * into itself).
+	 * @return {Boolean}
+	 */
+	p.draw = function(ctx, ignoreCache) {
+		// this relies on the _tick method because draw isn&#x27;t called if a parent is not visible.
+		if (this.visible) { this._visible = true; }
+		// the actual update happens in _handleDrawEnd
+		return true;
+	};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method cache
+	 */
+	p.cache = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method uncache
+	 */
+	p.uncache = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method updateCache
+	 */
+	p.updateCache = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method hitTest
+	 */
+	p.hitTest = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method localToGlobal
+	 */
+	p.localToGlobal = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method globalToLocal
+	 */
+	p.globalToLocal = function() {};
+
+	/**
+	 * Not applicable to DOMElement.
+	 * @method localToLocal
+	 */
+	p.localToLocal = function() {};
+
+	/**
+	 * DOMElement cannot be cloned. Throws an error.
+	 * @method clone
+	 */
+	p.clone = function() {
+		throw(&quot;DOMElement cannot be cloned.&quot;)
+	};
+
+	/**
+	 * Returns a string representation of this object.
+	 * @method toString
+	 * @return {String} a string representation of the instance.
+	 */
+	p.toString = function() {
+		return &quot;[DOMElement (name=&quot;+  this.name +&quot;)]&quot;;
+	};
+
+	/**
+     * Interaction events should be added to &#x60;htmlElement&#x60;, and not the DOMElement instance, since DOMElement instances
+	 * are not full EaselJS display objects and do not participate in EaselJS mouse events.
+	 * @event click
+	 */
+
+     /**
+     * Interaction events should be added to &#x60;htmlElement&#x60;, and not the DOMElement instance, since DOMElement instances
+ 	 * are not full EaselJS display objects and do not participate in EaselJS mouse events.
+	 * @event dblClick
+	 */
+
+     /**
+      * Interaction events should be added to &#x60;htmlElement&#x60;, and not the DOMElement instance, since DOMElement instances
+ 	  * are not full EaselJS display objects and do not participate in EaselJS mouse events.
+	  * @event mousedown
+	  */
+
+     /**
+      * The HTMLElement can listen for the mouseover event, not the DOMElement instance.
+      * Since DOMElement instances are not full EaselJS display objects and do not participate in EaselJS mouse events.
+      * @event mouseover
+	  */
+
+     /**
+      * Not applicable to DOMElement.
+	  * @event tick
+	  */
+
+
+// private methods:
+	/**
+	 * @property DisplayObject__tick
+	 * @type Function
+	 * @protected
+	 */
+	p.DisplayObject__tick = p._tick;
+
+	/**
+	 * @method _tick
+	 * @param {Array} params Parameters to pass onto the DisplayObject {{#crossLink &quot;DisplayObject/tick&quot;}}{{/crossLink}}
+	 * function.
+	 * @protected
+	 */
+	p._tick = function(params) {
+		var stage = this.getStage();
+		this._visible = false;
+		stage&amp;&amp;stage.on(&quot;drawend&quot;, this._handleDrawEnd, this, true);
+		this.DisplayObject__tick(params);
+	};
+	
+	/**
+	 * @method _handleDrawEnd
+	 * @param {Event} evt
+	 * @protected
+	 */
+	p._handleDrawEnd = function(evt) {
+		var o = this.htmlElement;
+		if (!o) { return; }
+		var style = o.style;
+		
+		var visibility = this._visible ? &quot;visible&quot; : &quot;hidden&quot;;
+		if (visibility != style.visibility) { style.visibility = visibility; }
+		if (!this._visible) { return; }
+		
+		var mtx = this.getConcatenatedMatrix(this._matrix);
+		var oMtx = this._oldMtx;
+		var n = 10000; // precision
+		if (!oMtx || oMtx.alpha != mtx.alpha) {
+			style.opacity = &quot;&quot;+(mtx.alpha*n|0)/n;
+			if (oMtx) { oMtx.alpha = mtx.alpha; }
+		}
+		if (!oMtx || oMtx.tx != mtx.tx || oMtx.ty != mtx.ty || oMtx.a != mtx.a || oMtx.b != mtx.b || oMtx.c != mtx.c || oMtx.d != mtx.d) {
+			var str = &quot;matrix(&quot; + (mtx.a*n|0)/n +&quot;,&quot;+ (mtx.b*n|0)/n +&quot;,&quot;+ (mtx.c*n|0)/n +&quot;,&quot;+ (mtx.d*n|0)/n +&quot;,&quot;+ (mtx.tx+0.5|0);
+			style.transform = style.WebkitTransform = style.OTransform = style.msTransform = str +&quot;,&quot;+ (mtx.ty+0.5|0) +&quot;)&quot;;
+			style.MozTransform = str +&quot;px,&quot;+ (mtx.ty+0.5|0) +&quot;px)&quot;;
+			this._oldMtx = oMtx ? oMtx.copy(mtx) : mtx.clone();
+		}
+	};
+
+createjs.DOMElement = DOMElement;
+}());
+
+    </pre>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/vendor/jquery.min.js"></script>
+<script src="../assets/js/jquery-offscreen-trigger.js"></script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
