@@ -1,0 +1,38 @@
+{
+  "name": "yuidoc-themes",
+  "description": "Custom themes for the YUIDoc documentation generator.",
+  "version": "0.1.0",
+  "keywords": [
+    "yuidoc",
+    "theme",
+    "smooth",
+    "neat"
+  ],
+  "author": {
+    "name": "Krxtopher",
+    "email": "unknown@exemple.com"
+  },
+  "contributors": [
+    {
+      "name": "Jean-cédric Thérond",
+      "email": "jean-cedric.therond@cellfishmedia.fr"
+    }
+  ],
+  "dependencies": {
+  },
+  "homepage": "https://github.com/Krxtopher/yuidoc-themes",
+  "bugs": "https://github.com/Krxtopher/yuidoc-themes/issues",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Krxtopher/yuidoc-themes.git"
+  },
+  "licenses": [
+    {
+      "type": "unknown",
+      "url": "none"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
